@@ -14,14 +14,25 @@ export const metadata: Metadata = {
   title: "Features",
   description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
   alternates: { canonical: "https://forgeforward.com/features" },
-  openGraph: { url: "https://forgeforward.com/features" },
+  openGraph: {
+    title: "Features — ForgeForward",
+    description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+    url: "https://forgeforward.com/features",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Features — ForgeForward",
+    description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function FeaturesPage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <section style={{ background: 'radial-gradient(circle at 15% 0%,rgba(122,92,255,0.35),transparent 40%),radial-gradient(circle at 85% 0%,rgba(255,78,78,0.32),transparent 38%),radial-gradient(circle at 55% 0%,rgba(255,179,87,0.25),transparent 35%),#0B1020' }}>
           <div
             className="bg-ivory"

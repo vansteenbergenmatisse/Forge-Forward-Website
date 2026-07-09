@@ -38,21 +38,29 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "ForgeForward",
-  url: "https://forgeforward.com",
-  logo: "https://forgeforward.com/logos/ff-horizontal-charcoal.svg",
-  description:
-    "Website design and marketing systems built for landscaping contractors.",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+1-646-951-7542",
-    email: "hello@forgeforward.com",
-    contactType: "customer service",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ForgeForward",
+    url: "https://forgeforward.com",
+    logo: "https://forgeforward.com/logos/ff-horizontal-charcoal.svg",
+    description:
+      "Website design and marketing systems built for landscaping contractors.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-646-951-7542",
+      email: "hello@forgeforward.com",
+      contactType: "customer service",
+    },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ForgeForward",
+    url: "https://forgeforward.com",
+  },
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -66,10 +74,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd[0]) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd[1]) }}
         />
       </head>
-      <body className="bg-ivory text-navy antialiased">{children}</body>
+      <body className="bg-ivory text-navy antialiased">
+        <a href="#main-content" className="skip-nav">Skip to main content</a>
+        {children}
+      </body>
     </html>
   );
 }

@@ -41,6 +41,8 @@ export default function Hero() {
                       src={src}
                       alt=""
                       loading="eager"
+                      width={36}
+                      height={36}
                       className="w-9 h-9 rounded-full object-cover border-2 border-ivory"
                       style={i > 0 ? { marginLeft: '-10px' } : undefined}
                     />
@@ -74,10 +76,10 @@ export default function Hero() {
               <div className="ff-marquee-track flex w-max">
                 <div className="flex gap-4 pr-4">
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] relative rounded-2xl overflow-hidden">
-                    <img src={jobPhotos[0].src} alt={jobPhotos[0].alt} loading="lazy" className="w-full h-full object-cover" />
+                    <img src={jobPhotos[0].src} alt={jobPhotos[0].alt} loading="lazy" width={600} height={800} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] relative rounded-2xl overflow-hidden">
-                    <img src={jobPhotos[1].src} alt={jobPhotos[1].alt} loading="lazy" className="w-full h-full object-cover" />
+                    <img src={jobPhotos[1].src} alt={jobPhotos[1].alt} loading="lazy" width={600} height={800} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] bg-white border border-hairline rounded-2xl p-[22px] flex flex-col justify-between text-left box-border">
                     <div>
@@ -85,7 +87,7 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-navy font-medium">&ldquo;{heroReviews[0].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[0].author}/200/200`} alt={heroReviews[0].author} loading="lazy" className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[0].author}/200/200`} alt={heroReviews[0].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-navy">{heroReviews[0].author}</div>
                         <div className="text-[12px] text-slate">{heroReviews[0].source}</div>
@@ -93,10 +95,10 @@ export default function Hero() {
                     </div>
                   </div>
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] relative rounded-2xl overflow-hidden">
-                    <img src={jobPhotos[2].src} alt={jobPhotos[2].alt} loading="lazy" className="w-full h-full object-cover" />
+                    <img src={jobPhotos[2].src} alt={jobPhotos[2].alt} loading="lazy" width={600} height={800} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] relative rounded-2xl overflow-hidden">
-                    <img src={jobPhotos[3].src} alt={jobPhotos[3].alt} loading="lazy" className="w-full h-full object-cover" />
+                    <img src={jobPhotos[3].src} alt={jobPhotos[3].alt} loading="lazy" width={600} height={800} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-none w-[clamp(230px,17vw,300px)] h-[clamp(340px,26vw,400px)] bg-navy rounded-2xl p-[22px] flex flex-col justify-between text-left box-border">
                     <div>
@@ -104,7 +106,7 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-white font-medium">&ldquo;{heroReviews[1].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[1].author}/200/200`} alt={heroReviews[1].author} loading="lazy" className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[1].author}/200/200`} alt={heroReviews[1].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-white">{heroReviews[1].author}</div>
                         <div className="text-[12px] text-gray-cool">{heroReviews[1].source}</div>
@@ -126,7 +128,7 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-navy font-medium">&ldquo;{heroReviews[0].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[0].author}/200/200`} alt="" loading="lazy" className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[0].author}/200/200`} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-navy">{heroReviews[0].author}</div>
                         <div className="text-[12px] text-slate">{heroReviews[0].source}</div>
@@ -145,7 +147,7 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-white font-medium">&ldquo;{heroReviews[1].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[1].author}/200/200`} alt="" loading="lazy" className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={`https://picsum.photos/seed/ff-review-${heroReviews[1].author}/200/200`} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-white">{heroReviews[1].author}</div>
                         <div className="text-[12px] text-gray-cool">{heroReviews[1].source}</div>

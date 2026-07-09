@@ -145,3 +145,28 @@
 .ff-doc strong { color: #0B1020; }
 .ff-doc a { color: #F6413E; }
 .ff-doc a:hover { color: #E1332F; }
+
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 0.5rem 1.25rem;
+  background: #0B1020;
+  color: #FCF8F3;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 9999;
+  text-decoration: none;
+}

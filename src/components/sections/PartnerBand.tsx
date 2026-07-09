@@ -18,6 +18,8 @@ export default function PartnerBand() {
                   src={logo.src}
                   alt={logo.alt}
                   loading="lazy"
+                  width={190}
+                  height={logo.height}
                   style={{ height: `${logo.height}px`, width: 'auto', maxWidth: '190px', objectFit: 'contain' }}
                 />
               </div>
@@ -30,6 +32,8 @@ export default function PartnerBand() {
                   src={logo.src}
                   alt=""
                   loading="lazy"
+                  width={190}
+                  height={logo.height}
                   style={{ height: `${logo.height}px`, width: 'auto', maxWidth: '190px', objectFit: 'contain' }}
                 />
               </div>

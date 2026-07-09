@@ -7,19 +7,48 @@ import PricingInside from "@/components/sections/PricingInside";
 import PricingGuarantee from "@/components/sections/PricingGuarantee";
 import PricingFAQ from "@/components/sections/PricingFAQ";
 import CTA from "@/components/sections/CTA";
+import { faqItems } from "@/data/pricing";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
   alternates: { canonical: "https://forgeforward.com/pricing" },
-  openGraph: { url: "https://forgeforward.com/pricing" },
+  openGraph: {
+    title: "Pricing — ForgeForward",
+    description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
+    url: "https://forgeforward.com/pricing",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing — ForgeForward",
+    description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
+    images: ["/opengraph-image.png"],
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
 };
 
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
-      <main>
+      <main id="main-content">
         <section style={{ background: 'radial-gradient(circle at 15% 0%,rgba(122,92,255,0.3),transparent 40%),radial-gradient(circle at 85% 0%,rgba(255,78,78,0.28),transparent 38%),radial-gradient(circle at 55% 0%,rgba(255,179,87,0.2),transparent 35%),#0B1020' }}>
           <div
             className="bg-ivory"
