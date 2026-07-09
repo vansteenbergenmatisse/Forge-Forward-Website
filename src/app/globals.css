@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-navy: #0B1020;
+  --color-navy-deep: #060810;
+  --color-red: #F6413E;
+  --color-red-hover: #E1332F;
+  --color-ivory: #FCF8F3;
+  --color-ivory-hover: #F1EBE0;
+  --color-slate: #6B6F78;
+  --color-gray-cool: #8890A0;
+  --color-hairline: #E5E0D8;
+  --color-hairline-warm: #EDE7DF;
+  --color-dark-card: #161C2C;
+  --color-dark-border: #262E44;
+  --color-dark-divider: #1A2036;
+  --color-green: #1E8A56;
+  --font-sans: 'Satoshi', 'Inter', system-ui, sans-serif;
+  --font-display: 'Satoshi', 'Inter', system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.ff-armed .ff-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.ff-reveal.ff-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ff-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes ff-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
+.ff-marquee-track {
+  animation: ff-marquee 45s linear infinite;
+}
+.ff-marquee-reverse {
+  animation: ff-marquee 34s linear infinite reverse;
+}
+.ff-marquee-wrap:hover .ff-marquee-track,
+.ff-marquee-wrap:hover .ff-marquee-reverse {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ff-marquee-track,
+  .ff-marquee-reverse {
+    animation: none;
+  }
+}
+
+@keyframes ff-price-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ff-pulse-dot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(246,65,62,0.45); }
+  50%      { box-shadow: 0 0 0 7px rgba(246,65,62,0); }
+}
+.ff-pulse-dot {
+  animation: ff-pulse-dot 1.8s ease-out infinite;
+}
+
+.ff-hover-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ff-hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+@media (max-width: 760px) {
+  .ff-nav-links { display: none !important; }
+  .ff-nav-toggle { display: flex !important; }
+}
+
+.ff-accordion-item .answer { display: none; }
+.ff-accordion-item.open .answer { display: block; }
+.ff-accordion-item[data-variant="faq"].open > button { background-color: #F6413E; color: white; }
+.ff-accordion-icon { font-size: 0; }
+.ff-accordion-icon::after { content: '+'; font-size: 20px; }
+.ff-accordion-item.open .ff-accordion-icon::after { content: '−'; }
+
+.ff-doc {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(40px,5vw,64px) clamp(20px,4vw,48px) clamp(56px,7vw,96px);
+}
+.ff-doc h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(32px,4vw,48px);
+  line-height: 1.1;
+  color: #0B1020;
+  margin: 0 0 10px;
+}
+.ff-doc .lead {
+  font-size: 14px;
+  color: #8890A0;
+  margin-bottom: 36px;
+}
+.ff-doc h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.15;
+  color: #0B1020;
+  margin: 44px 0 12px;
+}
+.ff-doc h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0B1020;
+  margin: 24px 0 8px;
+}
+.ff-doc p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #6B6F78;
+  margin: 0 0 14px;
+  max-width: 72ch;
+}
+.ff-doc ul,
+.ff-doc ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+.ff-doc li {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #6B6F78;
+  margin-bottom: 6px;
+  max-width: 70ch;
+}
+.ff-doc strong { color: #0B1020; }
+.ff-doc a { color: #F6413E; }
+.ff-doc a:hover { color: #E1332F; }

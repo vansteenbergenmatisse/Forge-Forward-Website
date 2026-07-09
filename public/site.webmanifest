@@ -1,0 +1,16 @@
+{
+  "name": "ForgeForward",
+  "short_name": "ForgeForward",
+  "description": "Website design and marketing systems for landscaping contractors.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0B1020",
+  "theme_color": "#0B1020",
+  "icons": [
+    {
+      "src": "/logos/ff-mark-red.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
