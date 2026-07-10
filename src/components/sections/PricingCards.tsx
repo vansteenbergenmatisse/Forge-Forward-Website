@@ -111,12 +111,11 @@ export default function PricingCards() {
         </span>
       </div>
 
-      {/* Cards + bonus column — side by side on desktop */}
+      {/* Cards side by side */}
       <div className="mt-6 flex gap-5 items-start w-full max-md:flex-col">
 
-        {/* LEFT: Landscaper Elite card, then bonus block directly below it */}
-        <div className="flex flex-col gap-4" style={{ flex: "1.3 1 0", minWidth: 0 }}>
-
+        {/* LEFT: Landscaper Elite */}
+        <div style={{ flex: "1.3 1 0", minWidth: 0 }}>
           <div className="relative bg-white border border-hairline rounded-[20px] shadow-[0_12px_30px_rgba(11,16,32,0.06)] p-[clamp(24px,3vw,32px)] flex flex-col">
             {/* Header */}
             <div className="flex items-center gap-[10px] flex-wrap">
@@ -139,6 +138,30 @@ export default function PricingCards() {
               {annual ? annualNote : monthlyNote}
             </div>
 
+            {/* Annual bonus block — inside the card, right below the price */}
+            {annual && (
+              <div
+                className="mt-5 border border-red/20 rounded-[16px] p-[18px]"
+                style={{ background: "rgba(246,65,62,0.04)" }}
+              >
+                <div className="ff-add-in text-[11.5px] font-bold tracking-[0.07em] uppercase text-red mb-3">
+                  Extra when you go yearly
+                </div>
+                <div className="flex flex-col gap-[10px]">
+                  {annualBonuses.map((b, i) => (
+                    <div
+                      key={b}
+                      className="ff-add-in flex items-center gap-[10px]"
+                      style={{ animationDelay: `${60 + i * 55}ms` }}
+                    >
+                      <StarSVG />
+                      <span className="text-[13.5px] font-semibold text-navy">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="my-5 h-px bg-hairline" />
 
             {/* Core features */}
@@ -157,30 +180,6 @@ export default function PricingCards() {
               </Button>
             </div>
           </div>
-
-          {/* Annual bonus block — directly under Landscaper Elite, animates in on toggle */}
-          {annual && (
-            <div
-              className="border border-red/20 rounded-[20px] p-[clamp(20px,2.5vw,28px)]"
-              style={{ background: "rgba(246,65,62,0.04)" }}
-            >
-              <div className="ff-add-in text-[12.5px] font-bold tracking-[0.06em] uppercase text-red mb-4">
-                Extra when you go yearly
-              </div>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-[14px] max-sm:grid-cols-1">
-                {annualBonuses.map((b, i) => (
-                  <div
-                    key={b}
-                    className="ff-add-in flex items-center gap-3"
-                    style={{ animationDelay: `${60 + i * 55}ms` }}
-                  >
-                    <StarSVG />
-                    <span className="text-[14.5px] font-semibold text-navy">{b}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
 
         {/* RIGHT: Multi-Location */}
