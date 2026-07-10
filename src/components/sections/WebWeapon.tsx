@@ -1,31 +1,68 @@
 import FeatureSpotlight from "./FeatureSpotlight";
 
 const websiteMockupHtml = `
-<div class="bg-white border border-hairline rounded-2xl shadow-[0_20px_44px_rgba(11,16,32,0.08)] w-full max-w-[440px] overflow-hidden box-border">
-  <div class="flex items-center gap-2 px-[14px] py-3 bg-[#F1EDE6] border-b border-hairline">
-    <span class="w-[10px] h-[10px] rounded-full bg-hairline inline-block"></span>
-    <span class="w-[10px] h-[10px] rounded-full bg-hairline inline-block"></span>
-    <span class="w-[10px] h-[10px] rounded-full bg-hairline inline-block"></span>
-    <div class="flex-1 ml-2 bg-white border border-hairline rounded-full px-[14px] py-[5px] text-[11.5px] text-slate text-center">
-      yourcompany.com
+<div style="background:white;border:1px solid #E5E0D8;border-radius:16px;box-shadow:0 20px 44px rgba(11,16,32,0.08);width:100%;max-width:440px;overflow:hidden;box-sizing:border-box;">
+  <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#F1EDE6;border-bottom:1px solid #E5E0D8;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#FC6058;display:inline-block;"></span>
+    <span style="width:10px;height:10px;border-radius:50%;background:#FEC02F;display:inline-block;"></span>
+    <span style="width:10px;height:10px;border-radius:50%;background:#2ACA44;display:inline-block;"></span>
+    <div style="flex:1;margin-left:8px;background:white;border:1px solid #E5E0D8;border-radius:20px;padding:4px 14px;font-size:11px;color:#6B6F78;text-align:center;">yourcompany.com</div>
+  </div>
+  <div style="position:relative;height:148px;background:linear-gradient(160deg,#1a4a1e 0%,#2a6e2a 45%,#4a8c3f 100%);">
+    <div style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(0,0,0,0.18);">
+      <div style="width:72px;height:9px;background:rgba(255,255,255,0.9);border-radius:4px;"></div>
+      <div style="display:flex;gap:12px;">
+        <div style="width:32px;height:6px;background:rgba(255,255,255,0.5);border-radius:3px;"></div>
+        <div style="width:32px;height:6px;background:rgba(255,255,255,0.5);border-radius:3px;"></div>
+        <div style="width:32px;height:6px;background:rgba(255,255,255,0.5);border-radius:3px;"></div>
+      </div>
+      <div style="background:#F6413E;border-radius:20px;padding:4px 12px;font-size:9px;font-weight:700;color:white;">Book a Call</div>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 16px 14px;background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,transparent 100%);">
+      <div style="width:72%;height:10px;background:rgba(255,255,255,0.95);border-radius:4px;margin-bottom:5px;"></div>
+      <div style="width:50%;height:10px;background:#F6413E;border-radius:4px;margin-bottom:10px;"></div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.95);border-radius:20px;padding:5px 14px;">
+        <div style="width:34px;height:6px;background:#0B1020;border-radius:3px;"></div>
+        <div style="width:8px;height:8px;background:#F6413E;border-radius:50%;flex-shrink:0;"></div>
+      </div>
     </div>
   </div>
-  <div class="px-6 py-7 flex flex-col items-start gap-[10px] box-border">
-    <div class="w-[78%] h-4 bg-navy rounded"></div>
-    <div class="w-[52%] h-4 bg-red rounded"></div>
-    <div class="w-[88%] h-2 bg-hairline rounded mt-2"></div>
-    <div class="w-[64%] h-2 bg-hairline rounded"></div>
-    <div class="mt-[14px] bg-navy text-white text-[12.5px] font-bold px-5 py-[10px] rounded-full self-start">
-      Book a Call
+  <div style="background:#0B1020;padding:7px 16px;display:flex;align-items:center;justify-content:center;gap:14px;">
+    <div style="display:flex;align-items:center;gap:4px;">
+      <span style="color:#F6413E;font-size:11px;letter-spacing:1px;">★★★★★</span>
+      <span style="font-size:10px;font-weight:600;color:white;">4.9 · 148 reviews</span>
     </div>
-    <div class="flex gap-2 mt-5 w-full">
-      <div class="flex-1 h-[72px] rounded-lg" style="background: linear-gradient(135deg,#E5E0D8,#FCF8F3);"></div>
-      <div class="flex-1 h-[72px] rounded-lg" style="background: linear-gradient(135deg,#E5E0D8,#FCF8F3);"></div>
-      <div class="flex-1 h-[72px] rounded-lg" style="background: linear-gradient(135deg,#E5E0D8,#FCF8F3);"></div>
+    <div style="width:1px;height:12px;background:rgba(255,255,255,0.2);"></div>
+    <span style="font-size:10px;color:rgba(255,255,255,0.6);">Serving 12+ towns</span>
+    <div style="width:1px;height:12px;background:rgba(255,255,255,0.2);"></div>
+    <span style="font-size:10px;color:rgba(255,255,255,0.6);">40+ clients</span>
+  </div>
+  <div style="padding:14px;background:#FCF8F3;display:flex;flex-direction:column;gap:8px;">
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#6B6F78;margin-bottom:2px;">Our Services</div>
+    <div style="display:flex;gap:7px;">
+      <div style="flex:1;background:white;border:1px solid #E5E0D8;border-radius:10px;padding:10px;box-sizing:border-box;">
+        <div style="width:14px;height:14px;background:#F6413E;border-radius:4px;margin-bottom:6px;"></div>
+        <div style="width:75%;height:6px;background:#0B1020;border-radius:3px;margin-bottom:5px;"></div>
+        <div style="width:100%;height:4px;background:#E5E0D8;border-radius:2px;margin-bottom:3px;"></div>
+        <div style="width:65%;height:4px;background:#E5E0D8;border-radius:2px;"></div>
+      </div>
+      <div style="flex:1;background:white;border:1px solid #E5E0D8;border-radius:10px;padding:10px;box-sizing:border-box;">
+        <div style="width:14px;height:14px;background:#F6413E;border-radius:4px;margin-bottom:6px;"></div>
+        <div style="width:60%;height:6px;background:#0B1020;border-radius:3px;margin-bottom:5px;"></div>
+        <div style="width:100%;height:4px;background:#E5E0D8;border-radius:2px;margin-bottom:3px;"></div>
+        <div style="width:80%;height:4px;background:#E5E0D8;border-radius:2px;"></div>
+      </div>
+      <div style="flex:1;background:white;border:1px solid #E5E0D8;border-radius:10px;padding:10px;box-sizing:border-box;">
+        <div style="width:14px;height:14px;background:#F6413E;border-radius:4px;margin-bottom:6px;"></div>
+        <div style="width:80%;height:6px;background:#0B1020;border-radius:3px;margin-bottom:5px;"></div>
+        <div style="width:100%;height:4px;background:#E5E0D8;border-radius:2px;margin-bottom:3px;"></div>
+        <div style="width:55%;height:4px;background:#E5E0D8;border-radius:2px;"></div>
+      </div>
     </div>
-    <div class="flex items-center gap-2 mt-[10px]">
-      <span class="text-red text-[13px] tracking-[1px]">★★★★★</span>
-      <span class="text-[12px] text-slate">4.9 · 148 reviews</span>
+    <div style="display:flex;gap:7px;margin-top:2px;">
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#1e5a22,#3a8c3f);"></div>
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#2a6e2a,#4a9c4f);"></div>
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#155018,#2d7a32);"></div>
     </div>
   </div>
 </div>

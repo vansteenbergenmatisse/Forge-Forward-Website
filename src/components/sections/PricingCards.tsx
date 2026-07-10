@@ -55,7 +55,7 @@ export default function PricingCards() {
   return (
     <>
       {/* Toggle */}
-      <div className="ff-reveal mt-7 flex items-center gap-[14px]">
+      <div className="mt-7 flex items-center gap-[14px]">
         <button
           onClick={handleToggle}
           role="switch"
@@ -83,7 +83,7 @@ export default function PricingCards() {
       {/* Cards */}
       <div className="mt-6 grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-5 w-full items-stretch max-md:grid-cols-1">
         {/* Landscaper Elite */}
-        <div className="ff-reveal relative bg-white border border-hairline rounded-[20px] shadow-[0_12px_30px_rgba(11,16,32,0.06)] p-[clamp(24px,3vw,32px)] flex flex-col">
+        <div className="relative bg-white border border-hairline rounded-[20px] shadow-[0_12px_30px_rgba(11,16,32,0.06)] p-[clamp(24px,3vw,32px)] flex flex-col">
           <div className="grid grid-cols-2 gap-[clamp(20px,2.5vw,28px)] flex-1 max-sm:grid-cols-1">
             <div className="flex flex-col items-start">
               <div className="flex items-center gap-[10px] flex-wrap">
@@ -142,7 +142,7 @@ export default function PricingCards() {
         </div>
 
         {/* Multi-Location */}
-        <div className="ff-reveal bg-navy rounded-[20px] p-[clamp(24px,3vw,32px)] flex flex-col">
+        <div className="bg-navy rounded-[20px] p-[clamp(24px,3vw,32px)] flex flex-col">
           <div className="text-[20px] font-bold text-white">Multi-Location</div>
           <p className="mt-[10px] text-[14px] leading-[1.6] text-gray-cool">
             Running more than one crew or town? We build it as one connected system priced around your footprint.
