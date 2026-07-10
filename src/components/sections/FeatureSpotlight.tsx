@@ -62,7 +62,10 @@ export default function FeatureSpotlight({ eyebrow, headline, body, features, vi
 
   const visualCol = (
     <Reveal className="bg-white border border-hairline rounded-[18px] p-[clamp(28px,4vw,56px)] flex items-center justify-center min-h-[420px] ff-hover-lift" delay={reverse ? 0 : 0.1}>
-      <div dangerouslySetInnerHTML={{ __html: visual }} />
+      {/* w-full + centering gives the injected mockup a real width. Without it the
+          slot shrink-wraps to its content, which collapses any visual whose
+          children are all absolutely positioned (e.g. the LocalCoverage map). */}
+      <div className="w-full flex justify-center" dangerouslySetInnerHTML={{ __html: visual }} />
     </Reveal>
   );
 

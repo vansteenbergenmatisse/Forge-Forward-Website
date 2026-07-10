@@ -19,7 +19,7 @@ export default function PricingInside() {
             <div className="flex flex-col gap-[10px]">
               <div className="bg-navy rounded-xl p-4 text-center">
                 <div className="text-[19px] font-bold text-white">Landscaper Elite</div>
-                <div className="mt-1 text-[12.5px] text-gray-cool">Every plan gets all 9</div>
+                <div className="mt-1 text-[12.5px] text-gray-cool">Every plan gets all 10</div>
               </div>
               {coreItems.map((item) => (
                 <Accordion key={item.title} question={item.title} answer={item.body} />

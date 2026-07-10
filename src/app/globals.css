@@ -63,6 +63,24 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Content that appears when toggling monthly/yearly (bonus block, added rows). */
+@keyframes ff-add-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ff-add-in { animation: ff-add-in 0.34s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Eye-icon in-depth explanation expanding under a feature row. */
+@keyframes ff-detail-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ff-detail-in { animation: ff-detail-in 0.26s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-add-in, .ff-detail-in { animation: none !important; }
+}
+
 @keyframes ff-pulse-dot {
   0%,100% { box-shadow: 0 0 0 0 rgba(246,65,62,0.45); }
   50%      { box-shadow: 0 0 0 7px rgba(246,65,62,0); }

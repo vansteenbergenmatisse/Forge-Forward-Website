@@ -8,7 +8,7 @@ const websiteMockupHtml = `
     <span style="width:10px;height:10px;border-radius:50%;background:#2ACA44;display:inline-block;"></span>
     <div style="flex:1;margin-left:8px;background:white;border:1px solid #E5E0D8;border-radius:20px;padding:4px 14px;font-size:11px;color:#6B6F78;text-align:center;">yourcompany.com</div>
   </div>
-  <div style="position:relative;height:148px;background:linear-gradient(160deg,#1a4a1e 0%,#2a6e2a 45%,#4a8c3f 100%);">
+  <div style="position:relative;height:148px;background:linear-gradient(155deg,#0B1020 0%,#161C2C 52%,#2A3350 100%);">
     <div style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(0,0,0,0.18);">
       <div style="width:72px;height:9px;background:rgba(255,255,255,0.9);border-radius:4px;"></div>
       <div style="display:flex;gap:12px;">
@@ -60,9 +60,9 @@ const websiteMockupHtml = `
       </div>
     </div>
     <div style="display:flex;gap:7px;margin-top:2px;">
-      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#1e5a22,#3a8c3f);"></div>
-      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#2a6e2a,#4a9c4f);"></div>
-      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#155018,#2d7a32);"></div>
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#2A3145,#454E68);"></div>
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#3B4358,#5A6480);"></div>
+      <div style="flex:1;height:50px;border-radius:8px;background:linear-gradient(135deg,#222839,#3C4560);"></div>
     </div>
   </div>
 </div>

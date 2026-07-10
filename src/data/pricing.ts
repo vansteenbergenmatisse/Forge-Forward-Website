@@ -1,8 +1,8 @@
 import type { AccordionItem, BonusItem, UpsellItem, FaqItem } from "@/types";
 
 export const PRICES = {
-  monthly: { amount: "$297", unit: "/mo", note: "Plus a $197 one-time setup fee. Cancel any month." },
-  annual: { amount: "$238", unit: "/mo", note: "Billed $3,564 for the year (15 months of service)." },
+  monthly: { amount: "$297", unit: "/mo", note: "Billed every 4 weeks. Plus a $197 one-time setup fee. Cancel anytime." },
+  annual: { amount: "$238", unit: "/mo", note: "$3,564, billed one year at a time. Includes 12 weeks free." },
 } as const;
 
 export const coreItems: AccordionItem[] = [
@@ -41,6 +41,10 @@ export const coreItems: AccordionItem[] = [
   {
     title: "5-Star Review Funnel (Automation)",
     body: "The job wraps and a text asks your happy customer for a review. The ask lands while the yard still smells like fresh mulch. Your stars pile up week after week until you sit above every shop in town.",
+  },
+  {
+    title: "One-Click Marketing Campaigns",
+    body: "Done-for-you referral and repeat-business campaigns, run for you every month and built into your plan. One click launches a pre-built campaign that nudges happy customers to send friends your way and pulls past customers back for the next job.",
   },
 ];
 
@@ -119,6 +123,6 @@ export const faqItems: FaqItem[] = [
   },
   {
     q: "What happens after the first 30 days?",
-    a: "The annual plan keeps running for the full 15 months. The guarantee covers your first 30 days of risk.",
+    a: "The annual plan keeps running for the full year, one year at a time, with your 12 free weeks included. The guarantee covers your first 30 days of risk.",
   },
 ];

@@ -3,11 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Label from "@/components/ui/Label";
 import Reveal from "@/components/ui/Reveal";
-import WebWeapon from "@/components/sections/WebWeapon";
-import MissedCall from "@/components/sections/MissedCall";
-import GetFound from "@/components/sections/GetFound";
-import LocalCoverage from "@/components/sections/LocalCoverage";
-import Campaigns from "@/components/sections/Campaigns";
+import FeatureMatrix from "@/components/sections/FeatureMatrix";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
@@ -46,16 +42,12 @@ export default function FeaturesPage() {
                 </h1>
               </Reveal>
               <Reveal delay={0.1} className="mt-5 text-[17px] leading-[1.6] text-slate max-w-[580px]">
-                Nine tools. One system. Built exclusively for landscaping contractors who want to stop chasing leads and start booking jobs automatically.
+                Ten tools. One system. Built exclusively for landscaping contractors who want to stop chasing leads and start booking jobs automatically. Every service, and exactly what comes with monthly versus yearly.
               </Reveal>
             </div>
           </div>
         </section>
-        <WebWeapon />
-        <MissedCall />
-        <GetFound />
-        <LocalCoverage />
-        <Campaigns />
+        <FeatureMatrix />
         <CTA showPricingLink />
       </main>
       <Footer />
