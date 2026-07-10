@@ -1,4 +1,4 @@
-export const BOOK_CALL_URL = "https://app.iclosed.io/e/Matisse/discovery-call";
+export const BOOK_CALL_URL = "https://app.iclosed.io/e/Matisse/15-min-discovery-call-website";
 
 export const CONTACT = {
   email: "hello@forgeforward.com",
