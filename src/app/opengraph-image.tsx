@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "ForgeForward | Marketing Systems for Landscapers";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -21,6 +20,7 @@ export default function Image() {
           fontFamily: "system-ui, sans-serif",
         }}
       >
+        {/* Wordmark row */}
         <div
           style={{
             display: "flex",
@@ -35,6 +35,7 @@ export default function Image() {
               height: "10px",
               borderRadius: "50%",
               background: "#F6413E",
+              display: "flex",
             }}
           />
           <div
@@ -44,28 +45,34 @@ export default function Image() {
               color: "#FCF8F3",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
+              display: "flex",
             }}
           >
             ForgeForward
           </div>
         </div>
 
+        {/* Headline — split into two spans inside a flex wrap so Satori is happy */}
         <div
           style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
             fontSize: "64px",
             fontWeight: 900,
             lineHeight: 1.1,
             textAlign: "center",
-            color: "#FCF8F3",
             maxWidth: "900px",
           }}
         >
-          Marketing Systems for{" "}
+          <span style={{ color: "#FCF8F3" }}>Marketing Systems for&nbsp;</span>
           <span style={{ color: "#F6413E" }}>Landscapers</span>
         </div>
 
+        {/* Sub-copy */}
         <div
           style={{
+            display: "flex",
             fontSize: "24px",
             color: "#8890A0",
             marginTop: "24px",
@@ -74,14 +81,14 @@ export default function Image() {
             lineHeight: 1.5,
           }}
         >
-          Website, SEO, AI ranking, and lead follow-up, one system built for
-          contractors.
+          Website, SEO, AI ranking, and lead follow-up. One system for contractors.
         </div>
 
+        {/* CTA pill */}
         <div
           style={{
-            marginTop: "48px",
             display: "flex",
+            marginTop: "48px",
             alignItems: "center",
             gap: "8px",
             background: "#F6413E",
