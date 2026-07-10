@@ -14,8 +14,12 @@ export default function PricingInside() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,340px),1fr))] gap-[clamp(20px,2.5vw,32px)] items-start">
+        <div className="grid grid-cols-[1.4fr_1fr] gap-[clamp(20px,2.5vw,32px)] items-start max-lg:grid-cols-1">
+
+          {/* LEFT: Landscaper Elite, then Bonus Stack below it */}
           <Reveal className="flex flex-col gap-6">
+
+            {/* Landscaper Elite */}
             <div className="flex flex-col gap-[10px]">
               <div className="bg-navy rounded-xl p-4 text-center">
                 <div className="text-[19px] font-bold text-white">Landscaper Elite</div>
@@ -25,10 +29,9 @@ export default function PricingInside() {
                 <Accordion key={item.title} question={item.title} answer={item.body} />
               ))}
             </div>
-          </Reveal>
 
-          <div className="flex flex-col gap-[10px]">
-            <Reveal className="flex flex-col gap-[10px]">
+            {/* Bonus Stack — stacked directly below Landscaper Elite */}
+            <div className="flex flex-col gap-[10px]">
               <div className="bg-navy rounded-xl p-4 text-center">
                 <div className="text-[19px] font-bold text-white">The bonus stack</div>
                 <div className="mt-1 text-[12.5px] font-bold text-red">Annual only. $4,985 free.</div>
@@ -43,22 +46,24 @@ export default function PricingInside() {
                   answer={item.body}
                 />
               ))}
-            </Reveal>
+            </div>
+          </Reveal>
 
-            <Reveal delay={0.1} className="flex flex-col gap-[10px] mt-4">
-              <div className="bg-navy rounded-xl p-4 text-center">
-                <div className="text-[19px] font-bold text-white">Other Services</div>
-                <div className="mt-1 text-[12.5px] text-gray-cool">Add these on when you&apos;re ready to go further</div>
-              </div>
-              {upsellItems.map((item) => (
-                <Accordion
-                  key={item.title}
-                  question={item.title}
-                  answer={`${item.lead}\n\n${item.bullets.map((b) => `• ${b}`).join('\n')}`}
-                />
-              ))}
-            </Reveal>
-          </div>
+          {/* RIGHT: Other Services only */}
+          <Reveal delay={0.1} className="flex flex-col gap-[10px]">
+            <div className="bg-navy rounded-xl p-4 text-center">
+              <div className="text-[19px] font-bold text-white">Other Services</div>
+              <div className="mt-1 text-[12.5px] text-gray-cool">Add these on when you&apos;re ready to go further</div>
+            </div>
+            {upsellItems.map((item) => (
+              <Accordion
+                key={item.title}
+                question={item.title}
+                answer={`${item.lead}\n\n${item.bullets.map((b) => `• ${b}`).join('\n')}`}
+              />
+            ))}
+          </Reveal>
+
         </div>
       </div>
     </section>

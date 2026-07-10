@@ -10,6 +10,7 @@ import LocalCoverage from "@/components/sections/LocalCoverage";
 import Campaigns from "@/components/sections/Campaigns";
 import Roadmap from "@/components/sections/Roadmap";
 import WhyItWorks from "@/components/sections/WhyItWorks";
+import PricingFAQ from "@/components/sections/PricingFAQ";
 import TrustBand from "@/components/sections/TrustBand";
 import CTA from "@/components/sections/CTA";
 
@@ -32,6 +33,7 @@ export default function Home() {
         <Campaigns />
         <Roadmap />
         <WhyItWorks />
+        <PricingFAQ />
         <TrustBand />
         <CTA showPricingLink showPriceNote />
       </main>
