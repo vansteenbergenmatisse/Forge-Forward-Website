@@ -99,11 +99,11 @@ export const upsellItems: UpsellItem[] = [
 export const faqItems: FaqItem[] = [
   {
     q: "Do I pay for ads too?",
-    a: "No. The entire system — website, SEO, AI tools, automations — runs with zero ad spend. You rank on Google Maps and show up in ChatGPT through the work we put in, not a monthly charge from Google. If you ever want to layer paid ads on top to accelerate growth, Google Ads is an optional add-on and every dollar of spend goes directly on your card. We never touch your ad budget.",
+    a: "No. The entire system (website, SEO, AI tools, automations) runs with zero ad spend. You rank on Google Maps and show up in ChatGPT through the work we put in, not a monthly charge from Google. If you ever want to layer paid ads on top to accelerate growth, Google Ads is an optional add-on and every dollar of spend goes directly on your card. We never touch your ad budget.",
   },
   {
     q: "Do monthly plans get the bonuses?",
-    a: "The bonus stack — Maps Multiplier, Citation Cascade, Pipeline Pilot, Review Responder, and Profile Poster ($4,985 combined value) — is exclusive to the annual plan. Monthly gives you the full core system: website, SEO, CRM, AI tools, automations, and campaigns. The bonuses are there to reward the commitment of going annual and they stack on top of everything the core system already does.",
+    a: "The bonus stack, Maps Multiplier, Citation Cascade, Pipeline Pilot, Review Responder, and Profile Poster ($4,985 combined value), is exclusive to the annual plan. Monthly gives you the full core system: website, SEO, CRM, AI tools, automations, and campaigns. The bonuses are there to reward the commitment of going annual and they stack on top of everything the core system already does.",
   },
   {
     q: "Who owns the website and domain?",
@@ -111,18 +111,18 @@ export const faqItems: FaqItem[] = [
   },
   {
     q: "How fast am I live?",
-    a: "Most clients are fully live within 2 to 3 weeks of the kickoff call. Week one is intake, setup, and system access. Week two is build and review. Week three is launch. Markets with more complexity sometimes take a day or two longer — we'll give you the exact timeline for your market on the call.",
+    a: "Most clients are fully live within 2 to 3 weeks of the kickoff call. Week one is intake, setup, and system access. Week two is build and review. Week three is launch. Markets with more complexity sometimes take a day or two longer, we'll give you the exact timeline for your market on the call.",
   },
   {
     q: "What is the $197 setup fee for?",
-    a: "It covers the cost of building your website and wiring up every piece of the system in week one — hosting, domain configuration, CRM build, automation wiring, and calendar integration. It's a one-time charge, not recurring. On the annual plan it's waived entirely. On the monthly plan, think of it this way: your plan is $297/mo, so by month seven the extra revenue the system has brought in has more than paid it back. It's front-loaded because the build work is front-loaded — it also keeps us from raising the monthly price for everyone just to absorb that week-one cost.",
+    a: "It covers the cost of building your website and wiring up every piece of the system in week one, hosting, domain configuration, CRM build, automation wiring, and calendar integration. It's a one-time charge, not recurring. On the annual plan it's waived entirely. On the monthly plan, think of it this way: your plan is $297/mo, so by month seven the extra revenue the system has brought in has more than paid it back. It's front-loaded because the build work is front-loaded, it also keeps us from raising the monthly price for everyone just to absorb that week-one cost.",
   },
   {
     q: "When am I going to start seeing results?",
-    a: "The AI tools — missed call text back, automated follow-up, booking calendar — go live on day one and start working the moment a lead hits your number. SEO and Google Maps take longer. Expect to see movement in search rankings within 60 to 90 days and meaningful map visibility within 90 to 120 days, depending on your market and current review count. Results also depend on your commitment to the system: responding to leads, collecting reviews, and showing up for the jobs it books. We give you the engine — you still have to drive. Contractors who stay consistent past the first season consistently see their pipeline full heading into the next year.",
+    a: "The AI tools, missed call text back, automated follow-up, booking calendar, go live on day one and start working the moment a lead hits your number. SEO and Google Maps take longer. Expect to see movement in search rankings within 60 to 90 days and meaningful map visibility within 90 to 120 days, depending on your market and current review count. Results also depend on your commitment to the system: responding to leads, collecting reviews, and showing up for the jobs it books. We give you the engine, you still have to drive. Contractors who stay consistent past the first season consistently see their pipeline full heading into the next year.",
   },
   {
     q: "What happens after the first 30 days?",
-    a: "The guarantee covers your first 30 days — if the system isn't working, you get your money back, no fight. After that, it keeps running: automations firing, reviews stacking, your site ranking higher week after week. Monthly plans bill every 4 weeks and can be cancelled at any time. Annual plans run for one full year, with your 12 weeks free already baked into the $238/mo rate. No surprise charges, no hidden fees, no long-term lock-in beyond the plan you signed up for.",
+    a: "The guarantee covers your first 30 days, if the system isn't working, you get your money back, no fight. After that, it keeps running: automations firing, reviews stacking, your site ranking higher week after week. Monthly plans bill every 4 weeks and can be cancelled at any time. Annual plans run for one full year, with your 12 weeks free already baked into the $238/mo rate. No surprise charges, no hidden fees, no long-term lock-in beyond the plan you signed up for.",
   },
 ];

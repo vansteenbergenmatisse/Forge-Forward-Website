@@ -138,7 +138,7 @@ export default function PricingCards() {
               {annual ? annualNote : monthlyNote}
             </div>
 
-            {/* Annual bonus block — inside the card, right below the price */}
+            {/* Annual bonus block - inside the card, right below the price */}
             {annual && (
               <div
                 className="mt-5 border border-red/20 rounded-[16px] p-[18px]"

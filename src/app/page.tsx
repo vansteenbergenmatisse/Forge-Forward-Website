@@ -15,8 +15,8 @@ import TrustBand from "@/components/sections/TrustBand";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "ForgeForward — Marketing Systems for Landscapers",
-  description: "Website design and marketing systems built for landscaping contractors. Get found on Google, answer every lead in 5 seconds, and fill your calendar — automatically.",
+  title: "ForgeForward | Marketing Systems for Landscapers",
+  description: "Website design and marketing systems built for landscaping contractors. Get found on Google, answer every lead in 5 seconds, and fill your calendar, automatically.",
 };
 
 export default function Home() {

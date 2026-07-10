@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
   alternates: { canonical: "https://forgeforward.com/pricing" },
   openGraph: {
-    title: "Pricing — ForgeForward",
+    title: "Pricing | ForgeForward",
     description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
     url: "https://forgeforward.com/pricing",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing — ForgeForward",
+    title: "Pricing | ForgeForward",
     description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
     images: ["/opengraph-image.png"],
   },

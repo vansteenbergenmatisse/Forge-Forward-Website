@@ -4,15 +4,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://forgeforward.com"),
   title: {
-    default: "ForgeForward — Marketing Systems for Landscapers",
-    template: "%s — ForgeForward",
+    default: "ForgeForward | Marketing Systems for Landscapers",
+    template: "%s | ForgeForward",
   },
   description:
     "Website design and marketing systems built for landscaping contractors. Get found on Google, answer every lead in 5 seconds, and fill your calendar automatically.",
   openGraph: {
     type: "website",
     siteName: "ForgeForward",
-    title: "ForgeForward — Marketing Systems for Landscapers",
+    title: "ForgeForward | Marketing Systems for Landscapers",
     description:
       "Website design and marketing systems built for landscaping contractors. Get found on Google, answer every lead in 5 seconds, and fill your calendar automatically.",
     url: "https://forgeforward.com",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ForgeForward — Marketing Systems for Landscapers",
+    title: "ForgeForward | Marketing Systems for Landscapers",
     description:
       "Website design and marketing systems built for landscaping contractors.",
     images: ["/opengraph-image.png"],

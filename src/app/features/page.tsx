@@ -8,18 +8,18 @@ import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+  description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
   alternates: { canonical: "https://forgeforward.com/features" },
   openGraph: {
-    title: "Features — ForgeForward",
-    description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+    title: "Features | ForgeForward",
+    description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
     url: "https://forgeforward.com/features",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Features — ForgeForward",
-    description: "See every part of the ForgeForward system — website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+    title: "Features | ForgeForward",
+    description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
     images: ["/opengraph-image.png"],
   },
 };

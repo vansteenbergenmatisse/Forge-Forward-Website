@@ -16,7 +16,7 @@ export default function PricingInside() {
 
         <div className="grid grid-cols-[1.4fr_1fr] gap-[clamp(20px,2.5vw,32px)] items-start max-lg:grid-cols-1">
 
-          {/* LEFT: Landscaper Elite, then Bonus Stack below it */}
+          
           <Reveal className="flex flex-col gap-6">
 
             {/* Landscaper Elite */}
@@ -30,7 +30,7 @@ export default function PricingInside() {
               ))}
             </div>
 
-            {/* Bonus Stack — stacked directly below Landscaper Elite */}
+            {/* Bonus Stack - stacked directly below Landscaper Elite */}
             <div className="flex flex-col gap-[10px]">
               <div className="bg-navy rounded-xl p-4 text-center">
                 <div className="text-[19px] font-bold text-white">The bonus stack</div>

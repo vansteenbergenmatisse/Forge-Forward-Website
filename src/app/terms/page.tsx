@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "ForgeForward's terms and conditions — the rules governing your use of our website and services.",
+  description: "ForgeForward's terms and conditions: the rules governing your use of our website and services.",
   alternates: { canonical: "https://forgeforward.com/terms" },
   robots: { index: false },
 };

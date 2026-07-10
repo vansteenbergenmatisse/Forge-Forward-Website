@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ForgeForward — Marketing Systems for Landscapers";
+export const alt = "ForgeForward | Marketing Systems for Landscapers";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -74,7 +74,7 @@ export default function Image() {
             lineHeight: 1.5,
           }}
         >
-          Website, SEO, AI ranking, and lead follow-up — one system built for
+          Website, SEO, AI ranking, and lead follow-up, one system built for
           contractors.
         </div>
 

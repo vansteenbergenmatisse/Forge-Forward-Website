@@ -8,7 +8,7 @@ import { coreItems, bonusItems, PRICES } from "@/data/pricing";
 /**
  * Per-service display metadata (icon + a short one-line blurb + a tidy label).
  * Keyed by the exact title in data/pricing.ts so the row set and its
- * monthly/yearly inclusion stay single-sourced there — this map only adds the
+ * monthly/yearly inclusion stay single-sourced there - this map only adds the
  * icon and the compact copy the matrix needs. The in-depth explanation behind
  * the eye icon comes straight from each item's `body` in data/pricing.ts.
  */
