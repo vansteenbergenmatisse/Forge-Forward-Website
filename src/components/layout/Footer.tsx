@@ -35,6 +35,11 @@ export default function Footer() {
           <a href={`tel:${CONTACT.phone}`} className="text-white text-[15px] no-underline hover:text-gray-cool transition-colors">
             {CONTACT.phoneDisplay}
           </a>
+          <address className="not-italic text-gray-cool text-[14px] leading-[1.6] mt-1">
+            {CONTACT.address.map((line) => (
+              <span key={line} className="block">{line}</span>
+            ))}
+          </address>
         </div>
 
         <div className="flex flex-col gap-3">

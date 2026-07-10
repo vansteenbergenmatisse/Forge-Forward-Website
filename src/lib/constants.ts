@@ -4,6 +4,7 @@ export const CONTACT = {
   email: "hello@forgeforward.com",
   phone: "+16469517542",
   phoneDisplay: "+1 (646) 951-7542",
+  address: ["175 Varick Street, Suite 415", "New York, NY 10014", "United States"],
 } as const;
 
 export const SOCIAL = {
