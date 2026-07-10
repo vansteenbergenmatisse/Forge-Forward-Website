@@ -17,86 +17,153 @@ export default function PrivacyPage() {
         <div className="bg-ivory">
           <div className="ff-doc">
             <h1>Privacy Policy</h1>
-            <p className="lead">Last updated: January 1, 2025</p>
+            <p className="lead">ForgeForward &mdash; Effective Date: January 1st, 2026</p>
 
-            <p>
-              ForgeForward (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-            </p>
+            <p><strong>IMPORTANT NOTICE REGARDING TEXT MESSAGING DATA</strong></p>
+            <p>ForgeForward (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) DOES NOT share customer opt-in information, including phone numbers and consent records, with any affiliates or third parties for marketing, promotional, or any other purposes unrelated to providing our direct services. All text messaging originator opt-in data is kept strictly confidential.</p>
 
             <h2>1. Information We Collect</h2>
-            <h3>Information You Provide</h3>
-            <p>We may collect information that you voluntarily provide when you:</p>
+            <h3>Personal Information</h3>
             <ul>
-              <li>Fill out a contact or booking form</li>
-              <li>Subscribe to our newsletter or marketing emails</li>
-              <li>Purchase a subscription or service</li>
-              <li>Communicate with us by phone, email, or chat</li>
+              <li>Name, email address, phone number, physical address</li>
+              <li>Payment information when you make a purchase or request a quote</li>
+              <li>Opt-in records and timestamps for all communication channels (SMS, email, etc.)</li>
             </ul>
-            <p>This information may include your name, email address, phone number, business name, billing address, and payment details.</p>
-
-            <h3>Information Collected Automatically</h3>
-            <p>When you visit our website, we automatically collect certain information, including:</p>
+            <h3>Non-Personal Information</h3>
             <ul>
-              <li><strong>Log data:</strong> IP address, browser type, pages visited, referring URLs, and the date and time of your visit.</li>
-              <li><strong>Cookies and similar technologies:</strong> We use cookies to remember your preferences, understand how you use our site, and deliver relevant advertising.</li>
-              <li><strong>Analytics data:</strong> We use third-party analytics tools (such as Google Analytics) to collect aggregated information about how visitors use our site.</li>
+              <li>IP address, browser type, device information</li>
+              <li>Website usage patterns and analytics</li>
+              <li>Cookies and similar technologies</li>
+            </ul>
+            <h3>Customer Communication</h3>
+            <ul>
+              <li>Records of inquiries and service requests</li>
+              <li>Appointment details and preferences</li>
+              <li>Service history and feedback</li>
             </ul>
 
             <h2>2. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
+            <p>We use collected data for:</p>
             <ul>
-              <li>Provide, operate, and improve our services</li>
-              <li>Process transactions and send related information</li>
-              <li>Send promotional communications (you can opt out at any time)</li>
-              <li>Respond to your comments, questions, and support requests</li>
-              <li>Monitor and analyze usage trends to improve user experience</li>
-              <li>Detect, investigate, and prevent fraudulent or illegal activity</li>
-              <li>Comply with legal obligations</li>
+              <li>Providing and improving our services</li>
+              <li>Processing transactions and payments</li>
+              <li>Communicating with you about your inquiries, appointments, and promotions</li>
+              <li>Enhancing website functionality and user experience</li>
+              <li>Ensuring security and fraud prevention</li>
+              <li>Maintaining records of your communication preferences and consent</li>
             </ul>
 
-            <h2>3. Sharing Your Information</h2>
-            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
+            <h2>3. SMS Messaging &amp; Compliance</h2>
+            <h3>Text Message Program Terms &amp; Conditions</h3>
+            <p>By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates.</p>
+
+            <h3>Opt-In &amp; Consent</h3>
             <ul>
-              <li><strong>Service providers:</strong> Trusted vendors who assist us in operating our website and delivering our services (e.g., payment processors, email platforms, hosting providers). These parties are contractually obligated to keep your information confidential.</li>
-              <li><strong>Legal requirements:</strong> If required by law or in response to a valid legal process.</li>
-              <li><strong>Business transfers:</strong> In connection with a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity.</li>
+              <li>You will only receive messages if you have explicitly opted in</li>
+              <li>We maintain timestamped records of all opt-in actions</li>
+              <li>We comply with the Telephone Consumer Protection Act (TCPA) and all applicable laws</li>
             </ul>
 
-            <h2>4. Cookies</h2>
-            <p>We use cookies and similar tracking technologies to track activity on our website and to hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some portions of our service may not function properly.</p>
-
-            <h2>5. Data Retention</h2>
-            <p>We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required by law. When we no longer need your information, we securely delete or anonymize it.</p>
-
-            <h2>6. Security</h2>
-            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-
-            <h2>7. Your Rights</h2>
-            <p>Depending on your location, you may have the right to:</p>
+            <h3>Opt-Out Instructions</h3>
             <ul>
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate data</li>
-              <li>Request deletion of your personal information (subject to certain exceptions)</li>
-              <li>Opt out of marketing communications at any time</li>
-              <li>Lodge a complaint with your local data protection authority</li>
+              <li>You can cancel SMS notifications at any time by replying &ldquo;STOP&rdquo;</li>
+              <li>You will receive a final confirmation message, and no further messages will be sent unless you re-opt in</li>
+              <li>All opt-out requests are processed immediately</li>
             </ul>
-            <p>To exercise any of these rights, please contact us at <a href="mailto:hello@forgeforward.com">hello@forgeforward.com</a>.</p>
+
+            <h3>Message Frequency &amp; Content</h3>
+            <ul>
+              <li>Message frequency varies based on your interactions with our business</li>
+              <li>Messages will be directly related to the services you have requested</li>
+              <li>We do not send promotional content without specific consent</li>
+            </ul>
+
+            <h3>Help &amp; Support</h3>
+            <ul>
+              <li>Reply &ldquo;HELP&rdquo; for assistance or contact us at <a href="mailto:hello@forgeforward.com">hello@forgeforward.com</a></li>
+              <li>Customer support is available during regular business hours</li>
+            </ul>
+
+            <h3>Carrier Information</h3>
+            <ul>
+              <li>Standard message and data rates may apply</li>
+              <li>Carriers are not liable for delayed or undelivered messages</li>
+              <li>Supported carriers include AT&amp;T, Verizon, T-Mobile, Sprint, and most regional carriers</li>
+            </ul>
+
+            <h3>SMS Data Protection Statement</h3>
+            <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors in support of service delivery (such as customer service) is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+            <p>We implement strict data protection measures to safeguard your SMS opt-in information and consent records.</p>
+
+            <h2>4. Information Sharing &amp; Disclosure</h2>
+            <p>We do not sell, rent, or trade personal information. We may share information with:</p>
+            <h3>Service Providers</h3>
+            <ul>
+              <li>Third-party vendors who assist in our operations (e.g., payment processing, appointment scheduling)</li>
+              <li>SMS aggregators and providers solely for the purpose of delivering messages you have consented to receive</li>
+              <li>All service providers are contractually obligated to maintain confidentiality and security</li>
+            </ul>
+            <h3>Legal Compliance</h3>
+            <ul>
+              <li>If required by law, legal process, or to protect our rights</li>
+              <li>In response to valid law enforcement requests or court orders</li>
+            </ul>
+            <h3>Business Transfers</h3>
+            <ul>
+              <li>In case of mergers, acquisitions, or sale of assets</li>
+              <li>In such cases, your data remains protected under the terms of this policy</li>
+            </ul>
+            <p>All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the text message services.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement and maintain reasonable security measures to protect your personal information:</p>
+            <ul>
+              <li>Encryption of sensitive data in transit and at rest</li>
+              <li>Secure access controls and authentication mechanisms</li>
+              <li>Regular security assessments and updates</li>
+              <li>Employee training on data protection</li>
+              <li>Breach notification protocols in accordance with applicable laws</li>
+              <li>Secure backup systems and disaster recovery procedures</li>
+            </ul>
+            <p>Despite these measures, no method of transmission over the Internet or electronic storage is 100% secure. We strive to use commercially acceptable means to protect your personal information but cannot guarantee absolute security.</p>
+
+            <h2>6. Cookies &amp; Tracking Technologies</h2>
+            <p>We use cookies and similar technologies to:</p>
+            <ul>
+              <li>Analyze site traffic and user behavior</li>
+              <li>Remember your preferences</li>
+              <li>Improve website functionality and user experience</li>
+              <li>Measure the effectiveness of our services</li>
+            </ul>
+            <p>You may control cookies through your browser settings. Disabling cookies may limit your ability to use certain features of our website.</p>
+
+            <h2>7. Your Rights &amp; Choices</h2>
+            <p>You have the right to:</p>
+            <ul>
+              <li>Access, update, or delete your personal information</li>
+              <li>Opt out of marketing emails by clicking &ldquo;unsubscribe&rdquo; in our emails</li>
+              <li>Opt out of SMS messages by replying &ldquo;STOP&rdquo;</li>
+              <li>Request information on how we process your data</li>
+              <li>Withdraw consent at any time for future communications</li>
+              <li>Lodge a complaint with a supervisory authority if you believe your rights have been violated</li>
+            </ul>
+            <p>To exercise these rights, please contact us using the information in Section 10.</p>
 
             <h2>8. Third-Party Links</h2>
-            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites, and we encourage you to review their privacy policies before providing any personal information.</p>
+            <p>Our website may contain links to third-party websites. We are not responsible for their privacy practices and encourage you to review their policies. This privacy policy applies only to information collected by ForgeForward.</p>
 
-            <h2>9. Children&rsquo;s Privacy</h2>
-            <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us and we will promptly delete it.</p>
+            <h2>9. Changes to This Privacy Policy</h2>
+            <p>We may update this policy periodically. The latest version will always be available on our website with the effective date. For significant changes, we will notify you by email or through a notice on our website.</p>
 
-            <h2>10. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the &ldquo;Last updated&rdquo; date. Your continued use of our services after any changes constitutes your acceptance of the revised policy.</p>
-
-            <h2>11. Contact Us</h2>
-            <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
+            <h2>10. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or how your information is handled, contact us at:</p>
             <ul>
               <li><strong>Email:</strong> <a href="mailto:hello@forgeforward.com">hello@forgeforward.com</a></li>
               <li><strong>Phone:</strong> <a href="tel:+16469517542">+1 (646) 951-7542</a></li>
+              <li><strong>Address:</strong> 175 Varick Street, Suite 415, New York, NY 10014</li>
+              <li><strong>Website:</strong> <a href="https://forgeforward.com">forgeforward.com</a></li>
             </ul>
+            <p>By using our website and services, you consent to this Privacy Policy.</p>
           </div>
         </div>
       </main>
