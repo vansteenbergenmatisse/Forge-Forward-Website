@@ -12,11 +12,11 @@ import { faqItems } from "@/data/pricing";
 export const metadata: Metadata = {
   title: "Pricing",
   description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
-  alternates: { canonical: "https://forgeforward.com/pricing" },
+  alternates: { canonical: "https://forgeforward.io/pricing" },
   openGraph: {
     title: "Pricing | ForgeForward",
     description: "One system built for landscaping contractors. Pay monthly or pay for the year and unlock $4,985 in bonuses. 30-day money-back guarantee.",
-    url: "https://forgeforward.com/pricing",
+    url: "https://forgeforward.io/pricing",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {

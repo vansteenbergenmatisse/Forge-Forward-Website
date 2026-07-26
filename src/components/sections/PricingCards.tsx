@@ -9,29 +9,30 @@ const coreFeatures = [
   "On-site SEO",
   "AI search ranking (ChatGPT)",
   "Command Center (your CRM)",
-  "Self-booking calendar (AI)",
-  "Missed call text back (AI)",
-  "Automated lead follow-up (AI)",
-  "5-star review funnel (automation)",
-  "One-click marketing campaigns",
+  "Missed call text back",
+  "Automated lead follow-up",
+  "5-star review funnel",
+  "More lead marketing campaigns",
 ];
 
 const annualBonuses = [
-  "12 weeks free (one year at a time)",
-  "$197 setup fee waived",
+  "12 weeks free",
+  "$197 Google My Business fee waived",
   "All 5 bonuses free ($4,985 value)",
   "30-day money-back guarantee",
+  "AI Chat & Calendar Booking Agent free (others charge $2,000/mo)",
+  "One month of Google Ads free (LSA or PPC)",
 ];
 
 const multiLocationFeatures = [
   "One system across every location",
   "A location page and GMB profile per town",
-  "One shared calendar and CRM",
+  "One shared CRM and lead inbox",
   "Priced around your footprint",
 ];
 
-const monthlyNote = "Billed every 4 weeks. Plus a $197 one-time setup fee. Cancel anytime.";
-const annualNote = "$3,564, billed one year at a time. Includes 12 weeks free.";
+const monthlyNote = "Billed every 4 weeks. Plus a $197 one-time Google My Business fee. Cancel anytime.";
+const annualNote = "$3,564 billed for the full year, then 12 weeks free after.";
 
 const CheckSVG = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red flex-none" aria-hidden="true">
@@ -159,6 +160,15 @@ export default function PricingCards() {
                     </div>
                   ))}
                 </div>
+                <div
+                  className="ff-add-in mt-3 pt-3 border-t border-red/20 flex items-baseline justify-between gap-2"
+                  style={{ animationDelay: `${60 + annualBonuses.length * 55}ms` }}
+                >
+                  <span className="text-[12px] font-bold uppercase tracking-[0.04em] text-navy">You save</span>
+                  <span className="text-[16px] font-extrabold text-red whitespace-nowrap line-through">
+                    $30,000+ <span className="text-[12px] font-semibold text-slate">(~$2,500/mo)</span>
+                  </span>
+                </div>
               </div>
             )}
 
@@ -175,7 +185,7 @@ export default function PricingCards() {
             </div>
 
             <div className="mt-[22px]">
-              <Button href={BOOK_CALL_URL} external variant="dark" arrowBadge className="w-full justify-center">
+              <Button href={BOOK_CALL_URL} variant="dark" arrowBadge className="w-full justify-center">
                 Book a Call
               </Button>
             </div>
@@ -199,7 +209,7 @@ export default function PricingCards() {
               ))}
             </div>
             <div className="mt-[22px]">
-              <Button href={BOOK_CALL_URL} external variant="light" className="w-full justify-center">
+              <Button href={BOOK_CALL_URL} variant="light" className="w-full justify-center">
                 Get a Custom Quote
               </Button>
             </div>

@@ -41,14 +41,12 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a
+        <Link
           href={BOOK_CALL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="ml-auto max-[760px]:hidden inline-flex items-center gap-[10px] rounded-full font-semibold whitespace-nowrap flex-shrink-0 transition-[background,transform,box-shadow] duration-150 ease-out active:scale-[0.98] cursor-pointer bg-navy text-white shadow-[0_10px_24px_rgba(11,16,32,0.28)] hover:bg-navy-deep px-[22px] py-3 text-sm"
         >
           Book a Call
-        </a>
+        </Link>
 
         <button
           onClick={() => setMenuOpen(o => !o)}
@@ -72,15 +70,13 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <a
+          <Link
             href={BOOK_CALL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="mt-3 inline-flex items-center justify-center rounded-full font-semibold bg-navy text-white px-[22px] py-3 text-sm"
           >
             Book a Call
-          </a>
+          </Link>
         </div>
       )}
     </header>

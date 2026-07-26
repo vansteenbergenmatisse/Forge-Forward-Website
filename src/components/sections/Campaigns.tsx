@@ -1,31 +1,53 @@
 import FeatureSpotlight from "./FeatureSpotlight";
 
 const campaignsMockupHtml = `
-<div class="bg-white border border-hairline rounded-2xl shadow-[0_20px_44px_rgba(11,16,32,0.08)] p-6 w-full max-w-[400px] flex flex-col gap-[10px] box-border">
-  <div class="text-[13px] font-medium tracking-[0.06em] uppercase text-slate mb-[6px]">
-    Active campaigns
+<div class="bg-white border border-hairline rounded-2xl shadow-[0_20px_44px_rgba(11,16,32,0.08)] p-6 w-full max-w-[400px] flex flex-col gap-5 box-border">
+
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center gap-2">
+      <span class="w-[7px] h-[7px] rounded-full bg-red flex-none"></span>
+      <span class="text-[11.5px] font-bold tracking-[0.07em] uppercase text-slate">Old Lead Revival</span>
+    </div>
+    <div class="bg-ivory rounded-xl px-4 py-3 flex flex-col gap-2">
+      <div class="text-[11px] text-slate">Text to Sarah M. &middot; 4 months after quote</div>
+      <div class="self-start bg-[#E9E9EB] rounded-[14px_14px_14px_4px] px-3 py-[9px] text-[13px] text-[#0B1020] leading-[1.45] max-w-[92%]">
+        Hey Sarah, it&rsquo;s Dave. You got a quote from us last spring. Running a deal this week for past contacts. Want to lock it in?
+      </div>
+      <div class="self-end bg-red rounded-[14px_14px_4px_14px] px-3 py-[9px] text-[13px] text-white leading-[1.45] max-w-[70%]">
+        Yes please!
+      </div>
+    </div>
   </div>
-  <div class="flex items-center gap-3 bg-ivory rounded-xl px-4 py-3">
-    <span class="text-[14px] text-navy flex-1">Refer a friend, get $50 off</span>
-    <span class="text-[11px] font-bold tracking-[0.04em] uppercase border rounded-full px-[10px] py-[3px]" style="color: #16a34a; border-color: #16a34a;">Live</span>
+
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center gap-2">
+      <span class="w-[7px] h-[7px] rounded-full bg-red flex-none"></span>
+      <span class="text-[11.5px] font-bold tracking-[0.07em] uppercase text-slate">Past Customer Review</span>
+    </div>
+    <div class="bg-ivory rounded-xl px-4 py-3 flex flex-col gap-2">
+      <div class="text-[11px] text-slate">Text to Mike T. &middot; After job completion</div>
+      <div class="self-start bg-[#E9E9EB] rounded-[14px_14px_14px_4px] px-3 py-[9px] text-[13px] text-[#0B1020] leading-[1.45] max-w-[92%]">
+        Hey Mike! Loved working on your yard. Mind leaving a quick Google review? Takes less than a minute. [link]
+      </div>
+      <div class="self-end flex items-center gap-1">
+        <span class="text-red text-[13px] leading-none">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="text-[12px] text-slate">Review posted</span>
+      </div>
+    </div>
   </div>
-  <div class="flex items-center gap-3 bg-ivory rounded-xl px-4 py-3">
-    <span class="text-[14px] text-navy flex-1">Spring cleanup, past customers</span>
-    <span class="text-[11px] font-bold tracking-[0.04em] uppercase border rounded-full px-[10px] py-[3px]" style="color: #16a34a; border-color: #16a34a;">Live</span>
-  </div>
-  <div class="text-[13px] text-slate mt-1">Both launched with one click.</div>
+
 </div>
 `;
 
 export default function Campaigns() {
   return (
     <FeatureSpotlight
-      eyebrow="One-Click Marketing Campaigns"
-      headline="Referrals and repeat business, on <span class='text-red'>autopilot</span>"
-      body="Referrals and repeat customers are the cheapest jobs you'll ever land. Launch a pre-built campaign with one click and we handle nudging happy customers to send friends your way, bringing past customers back for the next job, and more."
+      eyebrow="Lead Revival and Review Campaigns"
+      headline="Turn old leads into booked jobs, <span class='text-red'>automatically</span>"
+      body="You already paid for those leads and already have happy customers who never left a review. We text and email every old contact with a strong offer so dead leads become quotes again, and we send past customers a direct link to your Google profile so old jobs become fresh reviews."
       features={[
-        { icon: 'Share2', title: 'Referral Campaigns', desc: 'One click nudges happy customers to send friends your way.' },
-        { icon: 'HeartHandshake', title: 'Repeat Business Campaigns', desc: 'Special offers bring past customers back for the next job.' },
+        { icon: 'Share2', title: 'Old Lead Revival', desc: 'Dead leads get a strong offer that gives them a reason to book now, no new ad spend.' },
+        { icon: 'Star', title: 'Past Customer Reviews', desc: 'Old jobs become fresh Google reviews in under a minute.' },
       ]}
       visual={campaignsMockupHtml}
     />

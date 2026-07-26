@@ -16,7 +16,7 @@ export default function CTA({ showPricingLink = false, showPriceNote = false }: 
           Start getting <span className="text-red">booked</span>
         </h2>
         <p className="mt-[18px] text-[17px] leading-[1.6] text-gray-cool max-w-[560px]">
-          One 20-minute call. We show you exactly what we&apos;d build for your company. No pitch deck, no contract.{showPriceNote ? ' $297/mo. No setup fee. Cancel anytime.' : ''}
+          One 20-minute call. We show you exactly what we&apos;d build for your company. No pitch deck, no contract.{showPriceNote ? ' $297/mo. Cancel anytime.' : ''}
         </p>
         {showPriceNote && (
           <div className="mt-4 text-[14px] font-semibold text-red">
@@ -24,7 +24,7 @@ export default function CTA({ showPricingLink = false, showPriceNote = false }: 
           </div>
         )}
         <div className="flex gap-4 mt-8 flex-wrap justify-center">
-          <Button href={BOOK_CALL_URL} external variant="light" arrowBadge>Book a Call</Button>
+          <Button href={BOOK_CALL_URL} variant="light" arrowBadge>Book a Call</Button>
           {showPricingLink && (
             <Link
               href="/pricing"

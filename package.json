@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build && npx vercel --prod --yes && npx vercel alias set forgeforward-web.vercel.app forgeforward.io && npx vercel alias set forgeforward-web.vercel.app www.forgeforward.io"
   },
   "dependencies": {
     "lucide-react": "^1.24.0",

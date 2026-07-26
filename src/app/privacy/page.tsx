@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "ForgeForward's privacy policy: how we collect, use, and protect your information.",
-  alternates: { canonical: "https://forgeforward.com/privacy" },
+  alternates: { canonical: "https://forgeforward.io/privacy" },
   robots: { index: false },
 };
 
@@ -17,25 +17,26 @@ export default function PrivacyPage() {
         <div className="bg-ivory">
           <div className="ff-doc">
             <h1>Privacy Policy</h1>
-            <p className="lead">ForgeForward &mdash; Effective Date: January 1st, 2026</p>
+            <p className="lead">ForgeForward<br />Effective Date: Jan 1st, 2026</p>
 
             <p><strong>IMPORTANT NOTICE REGARDING TEXT MESSAGING DATA</strong></p>
             <p>ForgeForward (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) DOES NOT share customer opt-in information, including phone numbers and consent records, with any affiliates or third parties for marketing, promotional, or any other purposes unrelated to providing our direct services. All text messaging originator opt-in data is kept strictly confidential.</p>
 
             <h2>1. Information We Collect</h2>
-            <h3>Personal Information</h3>
+            <p>We collect the following types of information:</p>
+            <h3>Personal Information:</h3>
             <ul>
               <li>Name, email address, phone number, physical address</li>
               <li>Payment information when you make a purchase or request a quote</li>
               <li>Opt-in records and timestamps for all communication channels (SMS, email, etc.)</li>
             </ul>
-            <h3>Non-Personal Information</h3>
+            <h3>Non-Personal Information:</h3>
             <ul>
               <li>IP address, browser type, device information</li>
               <li>Website usage patterns and analytics</li>
               <li>Cookies and similar technologies</li>
             </ul>
-            <h3>Customer Communication</h3>
+            <h3>Customer Communication:</h3>
             <ul>
               <li>Records of inquiries and service requests</li>
               <li>Appointment details and preferences</li>
@@ -57,34 +58,34 @@ export default function PrivacyPage() {
             <h3>Text Message Program Terms &amp; Conditions</h3>
             <p>By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates.</p>
 
-            <h3>Opt-In &amp; Consent</h3>
+            <h3>Opt-In &amp; Consent:</h3>
             <ul>
               <li>You will only receive messages if you have explicitly opted in</li>
               <li>We maintain timestamped records of all opt-in actions</li>
               <li>We comply with the Telephone Consumer Protection Act (TCPA) and all applicable laws</li>
             </ul>
 
-            <h3>Opt-Out Instructions</h3>
+            <h3>Opt-Out Instructions:</h3>
             <ul>
               <li>You can cancel SMS notifications at any time by replying &ldquo;STOP&rdquo;</li>
               <li>You will receive a final confirmation message, and no further messages will be sent unless you re-opt in</li>
-              <li>All opt-out requests are processed immediately</li>
+              <li>All opt-out requests are processed immediately.</li>
             </ul>
 
-            <h3>Message Frequency &amp; Content</h3>
+            <h3>Message Frequency &amp; Content:</h3>
             <ul>
               <li>Message frequency varies based on your interactions with our business</li>
               <li>Messages will be directly related to the services you have requested</li>
               <li>We do not send promotional content without specific consent</li>
             </ul>
 
-            <h3>Help &amp; Support</h3>
+            <h3>Help &amp; Support:</h3>
             <ul>
-              <li>Reply &ldquo;HELP&rdquo; for assistance or contact us at <a href="mailto:hello@forgeforward.com">hello@forgeforward.com</a></li>
+              <li>Reply &ldquo;HELP&rdquo; for assistance or contact us at <a href="mailto:hello@forgeforward.io">hello@forgeforward.io</a></li>
               <li>Customer support is available during regular business hours</li>
             </ul>
 
-            <h3>Carrier Information</h3>
+            <h3>Carrier Information:</h3>
             <ul>
               <li>Standard message and data rates may apply</li>
               <li>Carriers are not liable for delayed or undelivered messages</li>
@@ -92,28 +93,28 @@ export default function PrivacyPage() {
             </ul>
 
             <h3>SMS Data Protection Statement</h3>
-            <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors in support of service delivery (such as customer service) is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+            <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
             <p>We implement strict data protection measures to safeguard your SMS opt-in information and consent records.</p>
 
             <h2>4. Information Sharing &amp; Disclosure</h2>
             <p>We do not sell, rent, or trade personal information. We may share information with:</p>
-            <h3>Service Providers</h3>
+            <h3>Service Providers:</h3>
             <ul>
               <li>Third-party vendors who assist in our operations (e.g., payment processing, appointment scheduling)</li>
-              <li>SMS aggregators and providers solely for the purpose of delivering messages you have consented to receive</li>
+              <li>SMS aggregators and providers solely for the purpose of delivering messages you&rsquo;ve consented to receive</li>
               <li>All service providers are contractually obligated to maintain confidentiality and security</li>
             </ul>
-            <h3>Legal Compliance</h3>
+            <h3>Legal Compliance:</h3>
             <ul>
               <li>If required by law, legal process, or to protect our rights</li>
               <li>In response to valid law enforcement requests or court orders</li>
             </ul>
-            <h3>Business Transfers</h3>
+            <h3>Business Transfers:</h3>
             <ul>
               <li>In case of mergers, acquisitions, or sale of assets</li>
               <li>In such cases, your data remains protected under the terms of this policy</li>
             </ul>
-            <p>All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the text message services.</p>
+            <p>All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.</p>
 
             <h2>5. Data Security</h2>
             <p>We implement and maintain reasonable security measures to protect your personal information:</p>
@@ -141,8 +142,8 @@ export default function PrivacyPage() {
             <p>You have the right to:</p>
             <ul>
               <li>Access, update, or delete your personal information</li>
-              <li>Opt out of marketing emails by clicking &ldquo;unsubscribe&rdquo; in our emails</li>
-              <li>Opt out of SMS messages by replying &ldquo;STOP&rdquo;</li>
+              <li>Opt-out of marketing emails by clicking &ldquo;unsubscribe&rdquo; in our emails</li>
+              <li>Opt-out of SMS messages by replying &ldquo;STOP&rdquo;</li>
               <li>Request information on how we process your data</li>
               <li>Withdraw consent at any time for future communications</li>
               <li>Lodge a complaint with a supervisory authority if you believe your rights have been violated</li>
@@ -157,12 +158,12 @@ export default function PrivacyPage() {
 
             <h2>10. Contact Us</h2>
             <p>If you have questions about this Privacy Policy or how your information is handled, contact us at:</p>
-            <ul>
-              <li><strong>Email:</strong> <a href="mailto:hello@forgeforward.com">hello@forgeforward.com</a></li>
-              <li><strong>Phone:</strong> <a href="tel:+16469517542">+1 (646) 951-7542</a></li>
-              <li><strong>Address:</strong> 175 Varick Street, Suite 415, New York, NY 10014</li>
-              <li><strong>Website:</strong> <a href="https://forgeforward.com">forgeforward.com</a></li>
-            </ul>
+            <p>
+              ForgeForward<br />
+              Phone: <a href="tel:+16469517542">+1 (646) 951-7542</a><br />
+              Email: <a href="mailto:hello@forgeforward.io">hello@forgeforward.io</a><br />
+              Website: <a href="https://forgeforward.io">forgeforward.io</a>
+            </p>
             <p>By using our website and services, you consent to this Privacy Policy.</p>
           </div>
         </div>

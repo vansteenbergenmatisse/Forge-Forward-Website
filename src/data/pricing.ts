@@ -1,86 +1,135 @@
 import type { AccordionItem, BonusItem, UpsellItem, FaqItem } from "@/types";
 
 export const PRICES = {
-  monthly: { amount: "$297", unit: "/mo", note: "Billed every 4 weeks. Plus a $197 one-time setup fee. Cancel anytime." },
-  annual: { amount: "$238", unit: "/mo", note: "$3,564, billed one year at a time. Includes 12 weeks free." },
+  monthly: { amount: "$297", unit: "/mo", note: "Billed every 4 weeks. Plus a $197 one-time Google My Business fee. Cancel anytime." },
+  annual: { amount: "$238", unit: "/mo", note: "$3,564 billed for the full year, then 12 weeks free after." },
 } as const;
 
 export const coreItems: AccordionItem[] = [
   {
     title: "Functional Website (15 to 20 pages)",
-    body: "Homepage, service pages and up to 15 pages for the towns you serve. It loads in 2 seconds and shows your best work up top. A homeowner lands and books a quote because the page does the selling for you.",
+    lead: "A homeowner lands and books a quote because the page does the selling for you.",
+    bullets: [
+      "Homepage, service and location pages, up to 20 for the towns you serve",
+      "Loads in 2 seconds",
+      "Shows your best work up top",
+    ],
   },
   {
     title: "Google My Business Optimization",
-    body: "We build your profile from A to Z. Hours, services and booking links get set. Photos, prices and keyword descriptions name your city. You climb the map because your profile answers every question Google asks.",
+    lead: "We build your profile from A to Z, so you climb the map because it answers every question Google asks.",
+    bullets: [
+      "Hours, services and booking links all set",
+      "Photos, prices and keyword descriptions that name your city",
+    ],
   },
   {
     title: "On-Site SEO",
-    body: "Schema markup, clean page titles and a proper sitemap on every page. Google reads your site clean and ranks it because every technical box gets checked. You get listed on Google and Bing from day one.",
+    lead: "Google reads your site clean and ranks it because every technical box gets checked. You get listed on Google and Bing from day one.",
+    bullets: [
+      "Schema markup on every page",
+      "Clean page titles",
+      "A proper sitemap",
+    ],
   },
   {
     title: "AI Search Ranking (ChatGPT)",
-    body: "A homeowner asks ChatGPT for a landscaper near them. Your name comes up. We build your site in the exact format AI search tools read and cite. Most contractors have no clue this exists yet, so you take the top spot before they wake up.",
+    lead: "A homeowner asks ChatGPT for a landscaper near them and your name comes up.",
+    bullets: [
+      "Built in the exact format AI search tools read and cite",
+      "Most contractors have no clue this exists yet, so you take the top spot before they wake up",
+    ],
   },
   {
     title: "Command Center (your CRM)",
-    body: "You get your own private CRM. Every lead, text and email lands in one inbox. You stop digging through five apps to find one phone number.",
+    lead: "You get your own private CRM, so you stop digging through five apps to find one phone number.",
+    bullets: [
+      "Every lead, text and email lands in one inbox",
+      "One place for everything",
+    ],
   },
   {
-    title: "Self-Booking Calendar (AI)",
-    body: "New jobs land on your calendar on their own. You open your phone on Monday and the week sits booked. Your crew sees a full board before the coffee is done.",
+    title: "Missed Call Text Back",
+    lead: "Four automated tools instantly follow up so no lead goes cold while you are on the tools.",
+    bullets: [
+      "Covers website forms, live chat, missed calls and Facebook or Instagram messages",
+      "Starts the conversation and reassures the customer",
+      "Notifies you so you can respond quickly",
+    ],
   },
   {
-    title: "Missed Call Text Back (AI)",
-    body: 'You miss a call up on a job. Five seconds later a text fires: "Sorry, I\'m on a job right now. Tell me what you need and I\'ll get you a price." Our AI answers like a real person. It knows your services and your prices. It gives the caller a real range and books the job straight into your calendar.',
+    title: "Automated Lead Follow-Up",
+    lead: "One text rarely closes a job, so the system keeps following up where most contractors quit after one try.",
+    bullets: [
+      "Three follow-ups on every lead",
+      "Three reminder texts on every booked job so the homeowner knows you are coming",
+    ],
   },
   {
-    title: "Automated Lead Follow-Up (AI)",
-    body: "One text rarely closes a job. Every lead gets three follow-ups because most contractors quit after one try. Every booked job gets three reminder texts so the homeowner shows up ready.",
+    title: "5-Star Review Funnel",
+    lead: "The job wraps and a text asks your happy customer for a review while the yard still smells like fresh mulch.",
+    bullets: [
+      "Automatic review request the moment a job is done",
+      "Your stars pile up week after week until you sit above every shop in town",
+    ],
   },
   {
-    title: "5-Star Review Funnel (Automation)",
-    body: "The job wraps and a text asks your happy customer for a review. The ask lands while the yard still smells like fresh mulch. Your stars pile up week after week until you sit above every shop in town.",
-  },
-  {
-    title: "One-Click Marketing Campaigns",
-    body: "Done-for-you referral and repeat-business campaigns, run for you every month and built into your plan. One click launches a pre-built campaign that nudges happy customers to send friends your way and pulls past customers back for the next job.",
+    title: "More Lead Marketing Campaigns",
+    lead: "Three automated campaigns run in the background long after the job is done.",
+    bullets: [
+      "Old Lead Revival: we text and email every old contact with a strong offer so leads you already paid for turn back into quotes",
+      "Past Customer Review Campaign: past customers get a direct link to your Google profile, turning old jobs into fresh reviews",
+      "Seasonal Promotion Campaigns: holiday and seasonal offers go out every month or quarter so new jobs land whenever the schedule looks empty",
+    ],
   },
 ];
 
 export const bonusItems: BonusItem[] = [
   {
     title: "Maps Multiplier",
-    value: "$997 value",
-    body: "We add you to Apple Maps, Bing Places and Yelp. iPhone users and Yelp shoppers find you on day one.",
+    value: "$1,497 value",
+    body: "We create and optimize your listings on Apple Maps, Bing Places, Yelp and Facebook Recommendations, plus your Better Business Bureau and local Chamber of Commerce profiles if you want. Nearly 6 in 10 U.S. mobile users are on Apple devices, and Bing handles about 1 in 9 U.S. desktop searches, so more homeowners can find you.",
   },
   {
     title: "Citation Cascade",
-    value: "$497 value",
-    body: "We list you on YellowPages, Manta and the big lead sites like Thumbtack and Nextdoor. We optimize those profiles too. More listings tell Google you are the real deal, so you climb higher.",
+    value: "$997 value",
+    body: "We list your business on YellowPages, Manta and trusted local directories, then optimize your profiles on Thumbtack, HomeAdvisor and Nextdoor. You get found in more places, and consistent listings help Google trust your business.",
   },
   {
     title: "Pipeline Pilot",
-    value: "$1,497 value",
-    body: "Leads drop into your CRM on their own. Automations watch every stage and fire the right message at the right moment. The pipeline runs while you run the crew.",
+    value: "$497 value",
+    body: "Every lead enters your CRM, moves into the right stage and gets the correct follow-up. Fewer leads get lost, and more quote requests become booked jobs.",
   },
   {
     title: "Review Responder",
     value: "$997 value",
-    body: "It replies to every Google review for you. Each reply names your service and your city, so even your replies help you rank.",
+    body: "We automatically reply to every Google review with a professional, personalized response. Your profile stays active and shows homeowners that you care about your customers.",
   },
   {
     title: "Profile Poster",
     value: "$997 value",
-    body: "It posts to your Google profile 2 to 3 times a week and names nearby towns. Your profile looks alive while your rival's sits frozen since 2022.",
+    body: "We publish two to three Google Business Profile posts each week about your services, completed jobs, offers and nearby towns. Homeowners see fresh proof that you are active in their area.",
   },
 ];
 
 export const upsellItems: UpsellItem[] = [
   {
-    title: "Google Ads",
-    lead: "So that people don't just find your business, but they find it for the right reasons",
-    bullets: ["PPC Ads", "LSA Ads"],
+    title: "Google Ads: PPC",
+    lead: "Pay-per-click ads that put you at the top of Google the moment they go live, for when you want leads faster than SEO ramps up.",
+    bullets: [
+      "Search ads on your highest-intent keywords",
+      "You only pay when someone clicks",
+      "Every dollar of spend stays on your card, we never touch your budget",
+    ],
+  },
+  {
+    title: "Google Ads: LSA",
+    lead: "Local Services Ads with the Google Guaranteed badge, the green-check calls that sit at the very top of search.",
+    bullets: [
+      "Google Guaranteed badge",
+      "Pay per lead, not per click",
+      "Shows above the regular search ads",
+    ],
   },
   {
     title: "Advanced SEO",
@@ -94,6 +143,15 @@ export const upsellItems: UpsellItem[] = [
       "Consistent Blogposts & New Content",
     ],
   },
+  {
+    title: "AI Chat & Calendar Booking Agent",
+    lead: "An AI agent that replies the second a lead messages, answers their questions, and books the appointment straight into your calendar, day or night. It goes beyond the text-back in your core system by holding the full conversation and closing the booking across every channel.",
+    bullets: [
+      "Works across Facebook, Instagram, WhatsApp, website live chat and text",
+      "Answers common questions and FAQs instantly",
+      "Books appointments into your calendar automatically, 24/7",
+    ],
+  },
 ];
 
 export const faqItems: FaqItem[] = [
@@ -103,7 +161,7 @@ export const faqItems: FaqItem[] = [
   },
   {
     q: "Do monthly plans get the bonuses?",
-    a: "The bonus stack, Maps Multiplier, Citation Cascade, Pipeline Pilot, Review Responder, and Profile Poster ($4,985 combined value), is exclusive to the annual plan. Monthly gives you the full core system: website, SEO, CRM, AI tools, automations, and campaigns. The bonuses are there to reward the commitment of going annual and they stack on top of everything the core system already does.",
+    a: "The bonus stack, Maps Multiplier, Citation Cascade, Pipeline Pilot, Review Responder, and Profile Poster ($4,985 combined value), is exclusive to the annual plan. Monthly gives you the full core system: website, SEO, CRM, automated lead response, follow-up, review funnel, and marketing campaigns. The bonuses are there to reward the commitment of going annual and they stack on top of everything the core system already does.",
   },
   {
     q: "Who owns the website and domain?",
@@ -114,12 +172,12 @@ export const faqItems: FaqItem[] = [
     a: "Most clients are fully live within 2 to 3 weeks of the kickoff call. Week one is intake, setup, and system access. Week two is build and review. Week three is launch. Markets with more complexity sometimes take a day or two longer, we'll give you the exact timeline for your market on the call.",
   },
   {
-    q: "What is the $197 setup fee for?",
-    a: "It covers the cost of building your website and wiring up every piece of the system in week one, hosting, domain configuration, CRM build, automation wiring, and calendar integration. It's a one-time charge, not recurring. On the annual plan it's waived entirely. On the monthly plan, think of it this way: your plan is $297/mo, so by month seven the extra revenue the system has brought in has more than paid it back. It's front-loaded because the build work is front-loaded, it also keeps us from raising the monthly price for everyone just to absorb that week-one cost.",
+    q: "What is the $197 Google My Business fee for?",
+    a: "It's a one-time charge to set up and optimize your Google My Business profile in week one: claiming and verifying your listing, dialing in your categories and service areas, loading photos and posts, and wiring it into your review system so you start showing up in the map pack. It's a one-time charge, not recurring. On the annual plan it's waived entirely. On the monthly plan, think of it this way: your plan is $297/mo, so by month seven the extra revenue the profile has brought in has more than paid it back. It's front-loaded because the setup work is front-loaded, and it keeps us from raising the monthly price for everyone just to absorb that week-one cost.",
   },
   {
     q: "When am I going to start seeing results?",
-    a: "The AI tools, missed call text back, automated follow-up, booking calendar, go live on day one and start working the moment a lead hits your number. SEO and Google Maps take longer. Expect to see movement in search rankings within 60 to 90 days and meaningful map visibility within 90 to 120 days, depending on your market and current review count. Results also depend on your commitment to the system: responding to leads, collecting reviews, and showing up for the jobs it books. We give you the engine, you still have to drive. Contractors who stay consistent past the first season consistently see their pipeline full heading into the next year.",
+    a: "The AI tools, missed call text back, automated follow-up and review funnel go live on day one and start working the moment a lead hits your number. SEO and Google Maps take longer. Expect to see movement in search rankings within 60 to 90 days and meaningful map visibility within 90 to 120 days, depending on your market and current review count. Results also depend on your commitment to the system: responding to leads, collecting reviews, and showing up for the jobs it brings in. We give you the engine, you still have to drive. Contractors who stay consistent past the first season consistently see their pipeline full heading into the next year.",
   },
   {
     q: "What happens after the first 30 days?",

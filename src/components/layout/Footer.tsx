@@ -40,6 +40,11 @@ export default function Footer() {
               <span key={line} className="block">{line}</span>
             ))}
           </address>
+          <address className="not-italic text-gray-cool text-[14px] leading-[1.6] mt-3">
+            {CONTACT.address2.map((line) => (
+              <span key={line} className="block">{line}</span>
+            ))}
+          </address>
         </div>
 
         <div className="flex flex-col gap-3">
@@ -53,9 +58,11 @@ export default function Footer() {
       <div className="border-t border-dark-divider">
         <div className="max-w-[1280px] mx-auto px-[clamp(20px,4vw,64px)] py-5 flex justify-between gap-4 flex-wrap">
           <span className="text-[13px] text-gray-cool">&copy; 2026 ForgeForward. All rights reserved.</span>
-          <span className="flex gap-4">
+          <span className="flex gap-4 flex-wrap">
             <Link href="/terms" className="text-[13px] text-gray-cool no-underline hover:text-white transition-colors">Terms &amp; Conditions</Link>
             <Link href="/privacy" className="text-[13px] text-gray-cool no-underline hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/earnings-disclaimer" className="text-[13px] text-gray-cool no-underline hover:text-white transition-colors">Earnings Disclaimer</Link>
+            <Link href="/data-protection" className="text-[13px] text-gray-cool no-underline hover:text-white transition-colors">Data Protection</Link>
           </span>
         </div>
       </div>

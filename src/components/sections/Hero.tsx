@@ -7,16 +7,18 @@ import { BOOK_CALL_URL } from "@/lib/constants";
 // work rather than random stock. Swap these for the client's own project photos
 // before launch (see /public for a self-hosted home once they're supplied).
 const jobPhotos = [
-  { id: 'job1', src: 'https://loremflickr.com/600/800/landscaping,garden,backyard/?lock=21', alt: 'Finished landscaping project' },
-  { id: 'job2', src: 'https://loremflickr.com/600/800/landscaping,patio,paving/?lock=22', alt: 'Paver patio installation' },
-  { id: 'job3', src: 'https://loremflickr.com/600/800/garden,lawn,flowerbed/?lock=23', alt: 'Fresh lawn and flower beds' },
-  { id: 'job4', src: 'https://loremflickr.com/600/800/landscaping,frontyard,plants/?lock=24', alt: 'Front-yard curb-appeal makeover' },
+  { id: 'job1', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop&auto=format&q=80', alt: 'Finished landscaping project' },
+  { id: 'job2', src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=800&fit=crop&auto=format&q=80', alt: 'Garden beds and plantings' },
+  { id: 'job3', src: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=800&fit=crop&auto=format&q=80', alt: 'Fresh lawn and flower beds' },
+  { id: 'job4', src: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&h=800&fit=crop&auto=format&q=80', alt: 'Lawn care and maintenance' },
 ];
 
+// Real client owners (landscapers/gardeners). Portraits are focused on the face
+// via object-position since the source photos are full-body.
 const reviewAvatars = [
-  'https://i.pravatar.cc/200?img=15',
-  'https://i.pravatar.cc/200?img=26',
-  'https://i.pravatar.cc/200?img=33',
+  '/images/avatars/green-leaf.webp',
+  '/images/avatars/evergreen.webp',
+  '/images/avatars/green-thumb.webp',
 ];
 
 export default function Hero() {
@@ -35,7 +37,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={0.16} className="flex gap-6 mt-7 flex-wrap justify-center items-center">
-              <Button href={BOOK_CALL_URL} external variant="dark" arrowBadge>Book a Call</Button>
+              <Button href={BOOK_CALL_URL} variant="dark" arrowBadge>Book a Call</Button>
               <div className="flex items-center gap-3">
                 <div className="flex">
                   {reviewAvatars.map((src, i) => (
@@ -90,10 +92,10 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-navy font-medium">&ldquo;{heroReviews[0].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://i.pravatar.cc/200?u=${encodeURIComponent(heroReviews[0].author)}`} alt={heroReviews[0].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={heroReviews[0].avatar} alt={heroReviews[0].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-navy">{heroReviews[0].author}</div>
-                        <div className="text-[12px] text-slate">{heroReviews[0].source}</div>
+                        <div className="text-[12px] text-slate">{heroReviews[0].company}</div>
                       </div>
                     </div>
                   </div>
@@ -109,10 +111,10 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-white font-medium">&ldquo;{heroReviews[1].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://i.pravatar.cc/200?u=${encodeURIComponent(heroReviews[1].author)}`} alt={heroReviews[1].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={heroReviews[1].avatar} alt={heroReviews[1].author} loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-white">{heroReviews[1].author}</div>
-                        <div className="text-[12px] text-gray-cool">{heroReviews[1].source}</div>
+                        <div className="text-[12px] text-gray-cool">{heroReviews[1].company}</div>
                       </div>
                     </div>
                   </div>
@@ -131,10 +133,10 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-navy font-medium">&ldquo;{heroReviews[0].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://i.pravatar.cc/200?u=${encodeURIComponent(heroReviews[0].author)}`} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={heroReviews[0].avatar} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-navy">{heroReviews[0].author}</div>
-                        <div className="text-[12px] text-slate">{heroReviews[0].source}</div>
+                        <div className="text-[12px] text-slate">{heroReviews[0].company}</div>
                       </div>
                     </div>
                   </div>
@@ -150,10 +152,10 @@ export default function Hero() {
                       <p className="mt-[14px] text-[14.5px] leading-[1.55] text-white font-medium">&ldquo;{heroReviews[1].quote}&rdquo;</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <img src={`https://i.pravatar.cc/200?u=${encodeURIComponent(heroReviews[1].author)}`} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
+                      <img src={heroReviews[1].avatar} alt="" loading="lazy" width={34} height={34} className="w-[34px] h-[34px] rounded-full object-cover" />
                       <div>
                         <div className="font-semibold text-[13px] text-white">{heroReviews[1].author}</div>
-                        <div className="text-[12px] text-gray-cool">{heroReviews[1].source}</div>
+                        <div className="text-[12px] text-gray-cool">{heroReviews[1].company}</div>
                       </div>
                     </div>
                   </div>

@@ -1,19 +1,19 @@
 import type { RoadmapStep, PartnerLogo } from "@/types";
 
 export const partnerLogos: PartnerLogo[] = [
-  { src: "/logos/localfalcon.png", alt: "LocalFalcon", height: 40 },
-  { src: "/logos/meta.png", alt: "Meta", height: 34 },
-  { src: "/logos/godaddy.png", alt: "GoDaddy", height: 58 },
-  { src: "/logos/openai.png", alt: "OpenAI", height: 68 },
-  { src: "/logos/google-business-profile.png", alt: "Google Business Profile", height: 48 },
-  { src: "/logos/ahrefs.png", alt: "Ahrefs", height: 38 },
-  { src: "/logos/google-analytics.png", alt: "Google Analytics", height: 40 },
-  { src: "/logos/semrush.png", alt: "Semrush", height: 52 },
-  { src: "/logos/twilio.png", alt: "Twilio", height: 50 },
-  { src: "/logos/google-search-console.png", alt: "Google Search Console", height: 46 },
-  { src: "/logos/leadconnector.png", alt: "LeadConnector", height: 46 },
-  { src: "/logos/google-ads.png", alt: "Google Ads", height: 58 },
-  { src: "/logos/n8n.png", alt: "n8n", height: 40 },
+  { src: "/logos/localfalcon.webp", alt: "LocalFalcon", height: 40 },
+  { src: "/logos/meta.webp", alt: "Meta", height: 34 },
+  { src: "/logos/godaddy.webp", alt: "GoDaddy", height: 58 },
+  { src: "/logos/openai.webp", alt: "OpenAI", height: 68 },
+  { src: "/logos/google-business-profile.webp", alt: "Google Business Profile", height: 48 },
+  { src: "/logos/ahrefs.webp", alt: "Ahrefs", height: 38 },
+  { src: "/logos/google-analytics.webp", alt: "Google Analytics", height: 40 },
+  { src: "/logos/semrush.webp", alt: "Semrush", height: 52 },
+  { src: "/logos/twilio.webp", alt: "Twilio", height: 50 },
+  { src: "/logos/google-search-console.webp", alt: "Google Search Console", height: 46 },
+  { src: "/logos/leadconnector.webp", alt: "LeadConnector", height: 46 },
+  { src: "/logos/google-ads.webp", alt: "Google Ads", height: 58 },
+  { src: "/logos/n8n.webp", alt: "n8n", height: 40 },
 ];
 
 export const roadmapSteps: RoadmapStep[] = [
@@ -54,13 +54,17 @@ export const trustStats = [
 
 export const heroReviews = [
   {
-    quote: "Found them on Google, booked online in two minutes. Crew showed up on time and the patio looks unreal.",
+    quote: "My old website never brought in a single job. ForgeForward rebuilt it and now homeowners find us on Google and book straight from the page. We are booked three weeks out.",
     author: "Mike Sanders",
+    company: "Green Leaf Landscaping Co.",
+    avatar: "/images/avatars/green-leaf.webp",
     source: "Google review",
   },
   {
-    quote: "Missed their call, got a text back before I could try anyone else. Booked the same day.",
+    quote: "Missed calls used to cost me jobs. Now every one gets a text back automatically and the review funnel keeps my Google stars climbing. More quote requests without chasing anyone.",
     author: "Jenna Cole",
+    company: "Evergreen Landscaping Co.",
+    avatar: "/images/avatars/evergreen.webp",
     source: "Google review",
   },
 ];

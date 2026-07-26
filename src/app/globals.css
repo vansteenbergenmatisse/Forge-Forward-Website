@@ -89,6 +89,19 @@
   animation: ff-pulse-dot 1.8s ease-out infinite;
 }
 
+/* Attention "jump" for the Step 3 video play button — bounces up and settles */
+@keyframes ff-bounce {
+  0%, 55%, 100% { transform: translateY(0); }
+  70%           { transform: translateY(-11px); }
+  85%           { transform: translateY(-4px); }
+}
+.ff-bounce {
+  animation: ff-bounce 1.9s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ff-bounce { animation: none; }
+}
+
 .ff-hover-lift {
   transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
               box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);

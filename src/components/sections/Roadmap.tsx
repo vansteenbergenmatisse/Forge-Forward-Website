@@ -70,7 +70,7 @@ export default function Roadmap() {
         </div>
 
         <Reveal delay={0.1} className="mt-10">
-          <Button href={BOOK_CALL_URL} external variant="dark" arrowBadge>Book a Call</Button>
+          <Button href={BOOK_CALL_URL} variant="dark" arrowBadge>Book a Call</Button>
         </Reveal>
       </div>
     </section>

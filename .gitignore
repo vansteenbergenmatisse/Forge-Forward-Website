@@ -40,3 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .visual-verification/
+
+# local working artifacts (not part of the site)
+.compact-ultra/
+.source-photos/
+/docs/

@@ -50,7 +50,7 @@ const rankingMockupHtml = `
           Who should I hire for landscaping near me?
         </div>
         <div class="text-[12.5px] leading-[1.55] text-[#ECECF1]">
-          &ldquo;<span style="color:#19C37D" class="font-bold">Your Company</span> is the top-rated option nearby &mdash; 4.9 stars across 148 reviews, and homeowners often mention fast quotes and clean work.&rdquo;
+          &ldquo;<span style="color:#19C37D" class="font-bold">Your Company</span> is the top-rated option nearby with 4.9 stars across 148 reviews, and homeowners often mention fast quotes and clean work.&rdquo;
         </div>
       </div>
     </div>

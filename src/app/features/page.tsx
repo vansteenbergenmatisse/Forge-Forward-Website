@@ -8,18 +8,18 @@ import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
-  alternates: { canonical: "https://forgeforward.com/features" },
+  description: "See every part of the ForgeForward system: website, instant lead response, local SEO, AI search ranking, CRM, review funnel, and four automated marketing campaigns.",
+  alternates: { canonical: "https://forgeforward.io/features" },
   openGraph: {
     title: "Features | ForgeForward",
-    description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
-    url: "https://forgeforward.com/features",
+    description: "See every part of the ForgeForward system: website, instant lead response, local SEO, AI search ranking, CRM, review funnel, and four automated marketing campaigns.",
+    url: "https://forgeforward.io/features",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Features | ForgeForward",
-    description: "See every part of the ForgeForward system: website, missed call text-back, local SEO, AI search ranking, location coverage, and one-click marketing campaigns.",
+    description: "See every part of the ForgeForward system: website, instant lead response, local SEO, AI search ranking, CRM, review funnel, and four automated marketing campaigns.",
     images: ["/opengraph-image.png"],
   },
 };
@@ -42,7 +42,7 @@ export default function FeaturesPage() {
                 </h1>
               </Reveal>
               <Reveal delay={0.1} className="mt-5 text-[17px] leading-[1.6] text-slate max-w-[580px]">
-                Ten tools. One system. Built exclusively for landscaping contractors who want to stop chasing leads and start booking jobs automatically. Every service, and exactly what comes with monthly versus yearly.
+                Nine tools. One system. Built exclusively for landscaping contractors who want to stop chasing leads and start filling their schedule automatically. Every service below, and exactly what comes with monthly versus yearly.
               </Reveal>
             </div>
           </div>

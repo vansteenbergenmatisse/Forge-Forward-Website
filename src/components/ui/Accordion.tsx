@@ -39,7 +39,7 @@ export default function Accordion({ question, answer, variant = 'default', defau
         </div>
       ) : (
         <div className="answer px-5 pb-[18px] bg-white">
-          <div className="text-[14px] leading-[1.6] text-slate">{answer}</div>
+          <div className="text-[14px] leading-[1.6] text-slate whitespace-pre-line">{answer}</div>
         </div>
       )}
     </div>

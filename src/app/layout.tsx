@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+// Temporarily disabled: global iClosed booking widget.
+// import IClosedLiftWidget from "@/components/ui/IClosedLiftWidget";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://forgeforward.com"),
+  metadataBase: new URL("https://forgeforward.io"),
   title: {
     default: "ForgeForward | Marketing Systems for Landscapers",
     template: "%s | ForgeForward",
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
     title: "ForgeForward | Marketing Systems for Landscapers",
     description:
       "Website design and marketing systems built for landscaping contractors. Get found on Google, answer every lead in 5 seconds, and fill your calendar automatically.",
-    url: "https://forgeforward.com",
+    url: "https://forgeforward.io",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image.png"],
   },
   alternates: {
-    canonical: "https://forgeforward.com",
+    canonical: "https://forgeforward.io",
   },
   icons: {
     icon: [
@@ -43,14 +45,14 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ForgeForward",
-    url: "https://forgeforward.com",
-    logo: "https://forgeforward.com/logos/ff-horizontal-charcoal.svg",
+    url: "https://forgeforward.io",
+    logo: "https://forgeforward.io/logos/ff-horizontal-charcoal.svg",
     description:
       "Website design and marketing systems built for landscaping contractors.",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-646-951-7542",
-      email: "hello@forgeforward.com",
+      email: "hello@forgeforward.io",
       contactType: "customer service",
     },
   },
@@ -58,13 +60,13 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "ForgeForward",
-    url: "https://forgeforward.com",
+    url: "https://forgeforward.io",
   },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="dns-prefetch" href="https://api.fontshare.com" />
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
@@ -83,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-ivory text-navy antialiased">
         <a href="#main-content" className="skip-nav">Skip to main content</a>
+        {/* Temporarily disabled: <IClosedLiftWidget /> */}
         {children}
       </body>
     </html>

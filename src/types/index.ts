@@ -1,10 +1,13 @@
 export interface AccordionItem {
   title: string;
-  body: string;
+  lead: string;
+  bullets: string[];
 }
 
-export interface BonusItem extends AccordionItem {
+export interface BonusItem {
+  title: string;
   value: string;
+  body: string;
 }
 
 export interface UpsellItem {

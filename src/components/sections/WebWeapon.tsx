@@ -73,7 +73,7 @@ export default function WebWeapon() {
     <FeatureSpotlight
       eyebrow="The Web Weapon"
       headline="A website that does the <span class='text-red'>selling</span> for you"
-      body="Homepage, 10 service pages, 10 local-area pages and a contact page, live fast and fully optimized to convert. A homeowner lands, sees your best work up top, and books a quote before they click away."
+      body="Homepage, service pages and up to 20 pages for the towns you serve, live fast and fully optimized to convert. A homeowner lands, sees your best work up top, and books a quote before they click away."
       features={[
         { icon: 'Gauge', title: '2-Second Load', desc: 'Fast pages rank higher and keep homeowners on them.' },
         { icon: 'Target', title: 'Built To Convert', desc: 'Every layout and word is built to turn visitors into booked jobs.' },

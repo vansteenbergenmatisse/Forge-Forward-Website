@@ -52,7 +52,7 @@ export default function Image() {
           </div>
         </div>
 
-        {/* Headline — split into two spans inside a flex wrap so Satori is happy */}
+        {/* Headline: split into two spans inside a flex wrap so Satori is happy */}
         <div
           style={{
             display: "flex",
@@ -99,7 +99,7 @@ export default function Image() {
             borderRadius: "50px",
           }}
         >
-          Book a Call at forgeforward.com
+          Book a Call at forgeforward.io
         </div>
       </div>
     ),
