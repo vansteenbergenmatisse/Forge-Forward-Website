@@ -22,7 +22,10 @@ export default function TermsPage() {
             <h2>SMS Messaging Terms &amp; Compliance</h2>
 
             <h3>1. Program Description</h3>
-            <p>ForgeForward offers separate transactional and marketing SMS programs. Customers who select the non-marketing SMS checkbox may receive responses to inquiries, requested follow-ups, appointment confirmations, reminders, rescheduling updates, and customer-support messages. Customers who separately select the marketing SMS checkbox may receive special offers, discounts, and promotions. Both SMS consent options are optional and unchecked by default. Message frequency varies. Message and data rates may apply.</p>
+            <p>ForgeForward offers account-notification, customer-care, and marketing SMS communications.</p>
+            <p>Customers who select the non-marketing SMS consent checkbox may receive account status updates, onboarding updates, service-request status updates, responses to inquiries, requested follow-ups, and customer-support communications.</p>
+            <p>Customers who separately select the marketing SMS consent checkbox may receive special offers, discounts, and service updates.</p>
+            <p>The marketing and non-marketing SMS consent options are separate, optional, and unchecked by default. Customers may select either option, both options, or neither option. Message frequency varies. Message and data rates may apply.</p>
 
             <h3>2. Cancellation Instructions</h3>
             <p>You can cancel the SMS service at any time. Simply text &ldquo;STOP&rdquo; to the same number that sent you messages. Upon sending &ldquo;STOP,&rdquo; we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.</p>
@@ -34,16 +37,16 @@ export default function TermsPage() {
             <p>Carriers are not liable for delayed or undelivered messages.</p>
 
             <h3>5. Message &amp; Data Rates</h3>
-            <p>Message and data rates may apply for messages sent to you from us and to us from you. Message frequency varies based on your service usage and appointment schedule. For questions about your text plan or data plan, contact your wireless provider.</p>
+            <p>Message and data rates may apply for messages sent to you from ForgeForward and messages sent by you to ForgeForward. Message frequency varies based on your interactions with ForgeForward and the messaging categories for which you provided consent. For questions about your text or data plan, contact your wireless provider.</p>
 
             <h3>6. Supported Carriers</h3>
-            <p>Our SMS program works with all major U.S. wireless carriers, including AT&amp;T, T-Mobile, Verizon, Sprint, and most regional carriers.</p>
+            <p>Our SMS messaging program is available through participating U.S. wireless carriers and supported regional carriers. Wireless-service availability may vary by carrier and location.</p>
 
             <h3>7. Age Restriction</h3>
             <p>You must be 18 years or older to participate in our SMS program.</p>
 
             <h3>8. Privacy Policy</h3>
-            <p>For privacy-related inquiries, please refer to our Privacy Policy at <a href="/privacy">forgeforward.io/privacy</a></p>
+            <p>For privacy-related inquiries, please refer to our Privacy Policy at <a href="https://www.forgeforward.io/privacy">www.forgeforward.io/privacy</a></p>
             <p>We comply with all applicable laws and regulations, including the Telephone Consumer Protection Act (TCPA) and CTIA guidelines, regarding the use of SMS communications.</p>
 
             <h2>General Terms</h2>
