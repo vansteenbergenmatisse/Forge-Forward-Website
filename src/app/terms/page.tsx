@@ -19,30 +19,10 @@ export default function TermsPage() {
             <h1>Terms of Service</h1>
             <p className="lead">ForgeForward<br />Effective Date: Jan 1st, 2026</p>
 
-            <p>Your Terms of Service must identify the sender, provide opt-out and support instructions, disclose frequency, and reference your Privacy Policy. Ensure the following clauses are included:</p>
-
-            <h2>TnC: Business Identity Clause</h2>
-            <p>Clearly insert your business name and a brief description of the messages users can expect. This clause gives users an idea of who you are and what you do.</p>
-
-            <h2>TnC: Opt-Out &amp; Support Mechanisms</h2>
-            <p>This must cover how users can opt out of messaging and explain how they can get support.</p>
-            <p>&ldquo;You can cancel the SMS service at any time. Just text &ldquo;STOP&rdquo; to the +1 (646) 951-7542. After you send the SMS message &ldquo;STOP&rdquo; to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again. If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at hello@forgeforward.io.&rdquo;</p>
-
-            <h2>TnC: Carrier Liability Clause</h2>
-            <p>&ldquo;Carriers are not liable for delayed or undelivered messages.&rdquo;</p>
-
-            <h2>TnC: Message Frequency Clause</h2>
-            <p>This clause must cover the frequency in which you receive messages as a user.</p>
-            <p>&ldquo;As always, message and data rates may apply for any messages sent to you from us and to us from you. You will receive messages related to your appointments, service updates, and customer support. If you have any questions about your text plan or data plan, it is best to contact your wireless provider.&rdquo;</p>
-
-            <h2>TnC: Privacy Policy Link</h2>
-            <p>You must have a cross-link to your privacy policy within the Terms of Service.</p>
-            <p>&ldquo;If you have any questions regarding privacy, please read our privacy policy: <a href="/privacy">forgeforward.io/privacy</a>&rdquo;</p>
-
             <h2>SMS Messaging Terms &amp; Compliance</h2>
 
             <h3>1. Program Description</h3>
-            <p>This messaging program sends appointment confirmation and reminder messages to customers who have booked an appointment with ForgeForward through our website at forgeforward.io, or via our scheduling forms, and have explicitly opted in to receive SMS notifications. Opt-in is collected via web forms with a dedicated checkbox for SMS consent. Messages include scheduling confirmations, appointment reminders, rescheduling updates, and customer support communications.</p>
+            <p>ForgeForward offers separate transactional and marketing SMS programs. Customers who select the non-marketing SMS checkbox may receive responses to inquiries, requested follow-ups, appointment confirmations, reminders, rescheduling updates, and customer-support messages. Customers who separately select the marketing SMS checkbox may receive special offers, discounts, and promotions. Both SMS consent options are optional and unchecked by default. Message frequency varies. Message and data rates may apply.</p>
 
             <h3>2. Cancellation Instructions</h3>
             <p>You can cancel the SMS service at any time. Simply text &ldquo;STOP&rdquo; to the same number that sent you messages. Upon sending &ldquo;STOP,&rdquo; we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.</p>

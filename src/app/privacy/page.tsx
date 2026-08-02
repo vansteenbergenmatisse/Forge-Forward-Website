@@ -57,6 +57,7 @@ export default function PrivacyPage() {
             <h2>3. SMS Messaging &amp; Compliance</h2>
             <h3>Text Message Program Terms &amp; Conditions</h3>
             <p>By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates.</p>
+            <p>Customers who separately select the marketing SMS checkbox may receive special offers, discounts, and promotional text messages from ForgeForward.</p>
 
             <h3>Opt-In &amp; Consent:</h3>
             <ul>

@@ -5,10 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const MARKETING_CONSENT =
-  "I consent to receive marketing text messages, about special offers, discounts, and service updates, from ForgeForward at the phone number provided. Message frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.";
+  "I consent to receive recurring marketing text messages from ForgeForward about special offers, discounts, and promotions at the phone number provided. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.";
 
 const NONMARKETING_CONSENT =
-  "I consent to receive non-marketing text messages from ForgeForward about appointment confirmations, reminders, and customer support communications. Message frequency may vary, message & data rates may apply. Text HELP for assistance, reply STOP to opt out.";
+  "I consent to receive recurring non-marketing text messages from ForgeForward about responses to my inquiry, requested follow-ups, appointment confirmations, reminders, rescheduling updates, and customer support. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out.";
 
 function SmsCheckbox({
   id,
