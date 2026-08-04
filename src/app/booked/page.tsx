@@ -65,9 +65,8 @@ export default function BookedPage() {
 
       <main className="wrap">
 
-        {/* ── 2. HERO — logo, personalized headline, subtitle ── */}
+        {/* ── 2. HERO — personalized headline + subtitle ── */}
         <header className="hero">
-          <img className="logo" src="/logos/ff-horizontal-white.svg" alt="ForgeForward" />
           <BookedGreeting />
         </header>
 
@@ -246,9 +245,6 @@ const bookedStyles = `
   }
   .bkPage a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
   .bkPage a:hover { color: var(--red-hover); }
-  /* The breakdown dialog keeps its own (Tailwind) link styling. */
-  .bkPage dialog a { color: inherit; }
-  .bkPage dialog a:hover { color: #fff; }
   .bkPage .headline { font-family: var(--font-barlow), 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; line-height: 0.95; color: #fff; margin: 0; }
   .bkPage .subhead { font-family: var(--font-barlow), 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 1; margin: 0; color: #fff; }
   .bkPage .kicker { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-dark); }
@@ -264,16 +260,19 @@ const bookedStyles = `
 
   /* Layout */
   .bkPage .wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
-  .bkPage .hero { padding-top: clamp(48px, 7vw, 80px); text-align: center; }
-  .bkPage .hero .logo { height: clamp(20px, 2.5vw, 24px); width: auto; display: block; margin: 0 auto clamp(24px, 4vw, 32px); }
+  .bkPage .hero { padding-top: 20px; text-align: center; }
   .bkPage .hero h1 { font-size: clamp(40px, 6.4vw, 60px); }
-  .bkPage .hero .lede { font-size: clamp(15px, 1.6vw, 17px); line-height: 1.6; max-width: 520px; margin: 18px auto 0; }
+  /* Wide enough to keep the subtitle on one line from tablet up. */
+  .bkPage .hero .lede { font-size: clamp(15px, 1.6vw, 17px); line-height: 1.6; max-width: 660px; margin: 16px auto 0; }
 
   /* Focus card */
-  .bkPage .focus-card { width: min(720px, 100%); margin: clamp(28px, 5vw, 44px) auto 0; background: #fff; border-radius: 16px; overflow: hidden; }
+  .bkPage .focus-card { width: min(720px, 100%); margin: clamp(22px, 3.4vw, 32px) auto 0; background: #fff; border-radius: 16px; overflow: hidden; }
   .bkPage .progress-track { height: 6px; background: var(--ivory-line); }
-  .bkPage .progress-fill { height: 100%; width: 0; background: var(--red); transition: width 200ms ease-out; }
-  .bkPage .focus-step { padding: clamp(32px, 5vw, 48px) clamp(24px, 6vw, 64px); text-align: center; }
+  .bkPage .progress-fill { height: 100%; background: var(--red); }
+  .bkPage .progress-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px clamp(24px, 6vw, 64px) 0; font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+  .bkPage .progress-meta .status { color: var(--gray); }
+  .bkPage .progress-meta .pct { color: var(--red); }
+  .bkPage .focus-step { padding: clamp(26px, 4vw, 38px) clamp(24px, 6vw, 64px) clamp(30px, 4.6vw, 44px); text-align: center; }
   .bkPage .focus-step + .focus-step { border-top: 1px solid var(--ivory-line); }
   .bkPage .focus-step .kicker { color: var(--gray); margin-bottom: 10px; }
   .bkPage .focus-step h2 { font-size: clamp(28px, 4vw, 36px); color: var(--charcoal); margin: 0 0 24px; }

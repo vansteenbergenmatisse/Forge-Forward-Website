@@ -32,7 +32,7 @@ export default function BookedGreeting() {
       </h1>
 
       <p className="lede">
-        Do these three small steps to confirm your call. It takes two to three minutes.
+        Do these 3 small steps to confirm your call. It takes 2 to 3 minutes.
       </p>
     </>
   );

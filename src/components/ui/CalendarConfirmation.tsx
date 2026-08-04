@@ -164,11 +164,6 @@ function downloadIcs(booking: Booking) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-/** Tells the focus card at the top of the page to fill its progress bar. */
-function markCalendarAdded() {
-  window.dispatchEvent(new CustomEvent("ff:calendar-added"));
-}
-
 /* ---- Brand logos (inline, self-contained — no external requests) ---- */
 
 function GoogleCalendarLogo() {
@@ -335,7 +330,6 @@ export default function CalendarConfirmation() {
           href={booking.googleUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={markCalendarAdded}
         >
           <GoogleCalendarLogo />
           <span className="cal-name">Add to Google Calendar</span>
@@ -346,7 +340,6 @@ export default function CalendarConfirmation() {
           href={booking.outlookUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={markCalendarAdded}
         >
           <OutlookLogo />
           <span className="cal-name">Add to Outlook Calendar</span>
@@ -355,10 +348,7 @@ export default function CalendarConfirmation() {
         <button
           className="cal-link"
           type="button"
-          onClick={() => {
-            downloadIcs(booking);
-            markCalendarAdded();
-          }}
+          onClick={() => downloadIcs(booking)}
         >
           <AppleLogo />
           <span className="cal-name">Add to Apple Calendar</span>
