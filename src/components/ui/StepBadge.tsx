@@ -24,9 +24,10 @@ export default function StepBadge({
 }) {
   return (
     <>
-      <div className="kicker">
-        Step {n}
-        {hint ? ` · ${hint}` : ""}
+      <div className="kicker step-kicker">
+        <span className="mark" aria-hidden="true" />
+        <span className="n">Step {n}</span>
+        {hint ? <span className="hint">· {hint}</span> : null}
       </div>
       <h2 className={`${large ? "headline" : "subhead"}${tight ? " tight" : ""}`}>{title}</h2>
     </>

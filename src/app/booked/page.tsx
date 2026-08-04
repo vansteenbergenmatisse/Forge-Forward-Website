@@ -249,6 +249,12 @@ const bookedStyles = `
   .bkPage .subhead { font-family: var(--font-barlow), 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 1; margin: 0; color: #fff; }
   .bkPage .kicker { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-dark); }
   .bkPage .kicker.red { color: var(--red); font-weight: 600; }
+  /* Step labels carry the page's structure, so they sit a notch louder than
+     the other kickers: bolder, full-contrast number, red marker. */
+  .bkPage .step-kicker { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 700; letter-spacing: 0.16em; }
+  .bkPage .step-kicker .mark { width: 7px; height: 7px; border-radius: 999px; background: var(--red); flex: none; }
+  .bkPage .step-kicker .n { color: #fff; }
+  .bkPage .step-kicker .hint { font-weight: 500; color: var(--gray-dark); }
   .bkPage .icon { display: inline-flex; flex: none; vertical-align: middle; }
   .bkPage .icon svg { display: block; }
 
@@ -274,7 +280,9 @@ const bookedStyles = `
   .bkPage .progress-meta .pct { color: var(--red); }
   .bkPage .focus-step { padding: clamp(26px, 4vw, 38px) clamp(24px, 6vw, 64px) clamp(30px, 4.6vw, 44px); text-align: center; }
   .bkPage .focus-step + .focus-step { border-top: 1px solid var(--ivory-line); }
-  .bkPage .focus-step .kicker { color: var(--gray); margin-bottom: 10px; }
+  .bkPage .focus-step .kicker { color: var(--gray); margin-bottom: 12px; }
+  .bkPage .focus-step .step-kicker .n { color: var(--charcoal); }
+  .bkPage .focus-step .step-kicker .hint { color: var(--gray); }
   .bkPage .focus-step h2 { font-size: clamp(28px, 4vw, 36px); color: var(--charcoal); margin: 0 0 24px; }
   .bkPage .focus-step h2.tight { margin-bottom: 12px; }
   .bkPage .focus-step .note { font-size: 13.5px; line-height: 1.6; color: var(--gray); margin: 0 0 20px; }
