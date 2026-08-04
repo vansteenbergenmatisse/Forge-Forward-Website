@@ -56,13 +56,15 @@ export default function PrivacyPage() {
 
             <h2>3. SMS Messaging &amp; Compliance</h2>
             <h3>Text Message Program Terms &amp; Conditions</h3>
-            <p>By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates.</p>
-            <p>Customers who separately select the marketing SMS checkbox may receive special offers, discounts, and promotional text messages from ForgeForward.</p>
+            <p>ForgeForward offers separate non-marketing and marketing SMS communications.</p>
+            <p>Customers who select the non-marketing SMS consent checkbox may receive account notifications and customer-care communications, including account status updates, onboarding updates, service-request updates, responses to inquiries, requested follow-ups, and customer-support messages.</p>
+            <p>Customers who separately select the marketing SMS consent checkbox may receive special offers, discounts, and service updates from ForgeForward.</p>
+            <p>Marketing messages are sent only when separate marketing SMS consent has been provided. Non-marketing messages are sent only when non-marketing SMS consent has been provided. Customers may select either option, both options, or neither option.</p>
 
             <h3>Opt-In &amp; Consent:</h3>
             <ul>
               <li>You will only receive messages if you have explicitly opted in</li>
-              <li>We maintain timestamped records of all opt-in actions</li>
+              <li>ForgeForward may maintain records of SMS consent, communication preferences, the consent language presented, and the date and method through which consent was provided</li>
               <li>We comply with the Telephone Consumer Protection Act (TCPA) and all applicable laws</li>
             </ul>
 
@@ -75,26 +77,26 @@ export default function PrivacyPage() {
 
             <h3>Message Frequency &amp; Content:</h3>
             <ul>
-              <li>Message frequency varies based on your interactions with our business</li>
-              <li>Messages will be directly related to the services you have requested</li>
+              <li>Message frequency varies based on your interactions with ForgeForward and the messaging categories for which you provided consent</li>
+              <li>SMS messages will be limited to the messaging categories for which you provided consent</li>
               <li>We do not send promotional content without specific consent</li>
             </ul>
 
             <h3>Help &amp; Support:</h3>
             <ul>
-              <li>Reply &ldquo;HELP&rdquo; for assistance or contact us at <a href="mailto:hello@forgeforward.io">hello@forgeforward.io</a></li>
+              <li>Reply &ldquo;HELP&rdquo; for assistance or contact ForgeForward at <a href="mailto:hello@forgeforward.io">hello@forgeforward.io</a> or <a href="tel:+16469517542">+1 (646) 951-7542</a></li>
               <li>Customer support is available during regular business hours</li>
             </ul>
 
             <h3>Carrier Information:</h3>
             <ul>
-              <li>Standard message and data rates may apply</li>
+              <li>Message and data rates may apply</li>
               <li>Carriers are not liable for delayed or undelivered messages</li>
-              <li>Supported carriers include AT&amp;T, Verizon, T-Mobile, Sprint, and most regional carriers</li>
+              <li>SMS availability may vary by wireless carrier and location</li>
             </ul>
 
             <h3>SMS Data Protection Statement</h3>
-            <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+            <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
             <p>We implement strict data protection measures to safeguard your SMS opt-in information and consent records.</p>
 
             <h2>4. Information Sharing &amp; Disclosure</h2>

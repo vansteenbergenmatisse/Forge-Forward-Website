@@ -375,12 +375,12 @@ function OfferOne({ onAccept, onCancel }: { onAccept: () => void; onCancel: () =
 /* ─────────────────────────── Step 2: consequences ─────────────────────────── */
 
 const CONSEQUENCES = [
-  "Your lead-generation campaigns pause and stop delivering new booked appointments",
-  "Your automations, follow-ups and CRM workflows are switched off",
-  "Your website and booking pages are no longer hosted or maintained by us",
-  "You lose priority support and your dedicated account manager",
+  "Your website and booking pages will be removed.",
+  "Your lead campaigns will be stopped and stop delivering new booked appointments",
+  "Your automations, follow-ups and CRM workflows will be switched off",
+  "You will lose support and your dedicated account manager",
   "Custom integrations and reporting dashboards are deactivated",
-  "Your lead data and assets need to be exported during offboarding",
+  "You will lose access of your lead data and assets during offboarding",
 ];
 
 function Consequences({ onContinue, onStop }: { onContinue: () => void; onStop: () => void }) {
@@ -420,7 +420,7 @@ function Consequences({ onContinue, onStop }: { onContinue: () => void; onStop: 
           Continue to cancel
         </button>
         <PrimaryButton onClick={onStop} className="w-full sm:w-auto">
-          Stop cancellation
+          Grab The One-Time Offer
         </PrimaryButton>
       </div>
     </div>
@@ -569,8 +569,7 @@ function ReasonSurvey({
         </div>
       </div>
       <p className="text-[15px] leading-[1.6] text-slate">
-        We are sorry to see you go. Before you cancel, help us understand what led to this. It
-        genuinely helps us improve.
+        We are sorry to see you go. Before you cancel, help us understand what led to this.
       </p>
 
       {/* Main reason (dropdown) */}
@@ -627,7 +626,7 @@ function ReasonSurvey({
       />
       <div className="mt-1.5 flex items-center justify-between text-[12.5px]">
         <span className={remaining > 0 ? "text-slate" : "font-semibold text-red"}>
-          {remaining > 0 ? `At least ${remaining} more character${remaining === 1 ? "" : "s"}` : "Thanks, that helps"}
+          {remaining > 0 ? `Write atleast ${remaining} more character${remaining === 1 ? ", to submit your decision" : "s, to submit your decision"}` : "Thanks, that helps"}
         </span>
         <span className="text-gray-cool">
           {description.trim().length}/{MAX_DESCRIPTION}
@@ -654,7 +653,7 @@ function ReasonSurvey({
 
 const FREE_BENEFITS = [
   `Your next ${FREE_MONTHS} payments are completely free`,
-  "Every campaign, automation and booked-call system keeps running",
+  "Every campaign, automation, website and booked-call system keeps running",
   "You can still cancel anytime, no strings attached",
   `After your ${FREE_MONTHS} free months, billing returns to your normal rate unless you cancel`,
 ];
@@ -731,9 +730,8 @@ function FinalStep() {
           <p className="mt-2 text-[14.5px] leading-[1.6] text-slate">
             Your cancellation request is in and our team has been notified. Your subscription is only
             cancelled once you{" "}
-            <span className="font-bold text-navy">book and attend a short offboarding call</span>. Until you
-            show up on that call, your account stays active. On the call we&rsquo;ll hand back your data,
-            automations and access cleanly, with no loose ends.
+            <span className="font-bold text-navy">book and attend a short 5min offboarding call</span>. Until you
+            show up on that call, your account and payment stays active. On the call we&rsquo;ll hand back your lead data with no loose ends.
           </p>
         </div>
       </div>

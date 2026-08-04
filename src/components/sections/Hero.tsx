@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { heroReviews } from "@/data/home";
@@ -13,12 +14,51 @@ const jobPhotos = [
   { id: 'job4', src: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&h=800&fit=crop&auto=format&q=80', alt: 'Lawn care and maintenance' },
 ];
 
-// Real client owners (landscapers/gardeners). Portraits are focused on the face
-// via object-position since the source photos are full-body.
-const reviewAvatars = [
-  '/images/avatars/green-leaf.webp',
-  '/images/avatars/evergreen.webp',
-  '/images/avatars/green-thumb.webp',
+// Third-party review platforms shown as social proof. Brand-accurate inline
+// SVG marks keep them crisp with no external assets or logo licensing hassle.
+function GoogleMark() {
+  return (
+    <svg viewBox="0 0 48 48" width="24" height="24" aria-hidden="true" className="flex-none">
+      <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+      <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+      <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+      <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+    </svg>
+  );
+}
+
+function FacebookMark() {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" className="flex-none">
+      <path fill="#1877F2" d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/>
+    </svg>
+  );
+}
+
+function TrustpilotMark() {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" className="flex-none">
+      <path fill="#00B67A" d="M12 1.5l2.94 7.03 7.56.58-5.76 4.94 1.78 7.45L12 17.9l-6.52 3.6 1.78-7.45L1.5 9.11l7.56-.58z"/>
+    </svg>
+  );
+}
+
+function Stars() {
+  return (
+    <div className="flex gap-[2px]" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((s) => (
+        <svg key={s} viewBox="0 0 20 20" width="14" height="14" fill="#E8940C">
+          <path d="M10 1.5l2.47 5.02 5.53.8-4 3.9.94 5.53L10 14.15l-4.94 2.6.94-5.53-4-3.9 5.53-.8z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+const reviewPlatforms = [
+  { id: 'google', name: 'Google', logo: <GoogleMark /> },
+  { id: 'facebook', name: 'Facebook', logo: <FacebookMark /> },
+  { id: 'trustpilot', name: 'Trustpilot', logo: <TrustpilotMark /> },
 ];
 
 export default function Hero() {
@@ -32,35 +72,30 @@ export default function Hero() {
           <div className="max-w-[1000px] mx-auto px-[clamp(20px,4vw,64px)] pt-[clamp(48px,6vw,76px)] pb-0 flex flex-col items-center text-center">
             <Reveal>
               <h1 className="font-display font-black text-[clamp(34px,4.6vw,62px)] leading-[1.1] tracking-[-0.01em] text-navy m-0 max-w-[17ch]">
-                Website design and marketing systems <span className="text-red">for landscapers.</span>
+                Website design and AI marketing systems <span className="text-red">for landscapers.</span>
               </h1>
             </Reveal>
 
-            <Reveal delay={0.16} className="flex gap-6 mt-7 flex-wrap justify-center items-center">
+            <Reveal delay={0.16} className="mt-7">
               <Button href={BOOK_CALL_URL} variant="dark" arrowBadge>Book a Call</Button>
-              <div className="flex items-center gap-3">
-                <div className="flex">
-                  {reviewAvatars.map((src, i) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt=""
-                      loading="eager"
-                      width={36}
-                      height={36}
-                      className="w-9 h-9 rounded-full object-cover border-2 border-ivory"
-                      style={i > 0 ? { marginLeft: '-10px' } : undefined}
-                    />
-                  ))}
-                </div>
-                <div className="text-left">
-                  <div className="text-red text-[15px] tracking-[2px] leading-none">★★★★★</div>
-                  <div className="text-[14px] text-slate mt-[3px]">Trusted by 40+ clients on Trustpilot</div>
-                </div>
-              </div>
             </Reveal>
 
-            <Reveal delay={0.2} className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full bg-white border border-hairline">
+            <Reveal delay={0.2} className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+              {reviewPlatforms.map((p, i) => (
+                <Fragment key={p.id}>
+                  {i > 0 && <span className="hidden sm:block w-px h-8 bg-navy/15" aria-hidden="true" />}
+                  <div className="flex items-center gap-[10px]" aria-label={`${p.name}, rated 5 out of 5 stars`}>
+                    {p.logo}
+                    <div className="text-left">
+                      <div className="text-[15px] font-bold text-navy leading-none">{p.name}</div>
+                      <div className="mt-[5px]"><Stars /></div>
+                    </div>
+                  </div>
+                </Fragment>
+              ))}
+            </Reveal>
+
+            <Reveal delay={0.24} className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-full bg-white border border-hairline">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red flex-none" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path d="M9 12l2 2 4-4" />

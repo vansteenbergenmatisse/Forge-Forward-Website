@@ -34,7 +34,7 @@ export default function IClosedWidget() {
     >
       <div
         className="call-details-widget"
-        data-url="https://app.iclosed.io/e/Matisse/15-min-discovery-call-website"
+        data-url="https://app.iclosed.io/embed"
         style={{ width: "100%", height: "820px" }}
       />
     </div>
