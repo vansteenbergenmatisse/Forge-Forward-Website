@@ -42,12 +42,9 @@ export default function BreakdownModal() {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="inline-block bg-red text-white font-bold text-[clamp(14px,1.8vw,16px)] px-[30px] py-[14px] rounded-lg shadow-[0_0_24px_rgba(246,65,62,0.4)] cursor-pointer transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98]"
-      >
-        Read the Full Breakdown &rarr;
+      {/* Styled by the page-scoped stylesheet in src/app/booked/page.tsx */}
+      <button type="button" onClick={() => setOpen(true)} className="btn btn-white btn-block-mobile">
+        Read the Full Breakdown <span className="arrow" aria-hidden="true">&rarr;</span>
       </button>
 
       <dialog

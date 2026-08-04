@@ -6,13 +6,16 @@ import { useEffect, useState } from "react";
  * Reads the booking details Calendly appends to its redirect URL
  * (enable "Pass event details to your redirected page" in Calendly, and
  * point the redirect at https://forgeforward.io/booked) and renders a
- * confirmation + native "add to calendar" links (Google + Outlook).
+ * confirmation + native "add to calendar" links (Google + Outlook + Apple).
  *
  * Everything is derived purely from the URL query string:
  *   event_type_name, event_start_time, event_end_time (ISO8601 in the
  *   invitee's timezone, offset only), invitee_first_name / invitee_full_name.
  *
  * No network calls, no SDK — safe on a statically prerendered page.
+ *
+ * Presentation classes (.badge, .detail-box, .cal-link, …) come from the
+ * page-scoped stylesheet in src/app/booked/page.tsx.
  */
 
 type Booking = {
@@ -25,9 +28,6 @@ type Booking = {
   outlookUrl: string;
   ics: string;
 };
-
-const BRAND_RED = "#F6413E";
-const TEXT_DIM = "#9A9A9A";
 
 /** Minutes east of UTC encoded in an ISO8601 string, or null if none/Z. */
 function isoOffsetMinutes(iso: string): number | null {
@@ -164,6 +164,11 @@ function downloadIcs(booking: Booking) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+/** Tells the focus card at the top of the page to fill its progress bar. */
+function markCalendarAdded() {
+  window.dispatchEvent(new CustomEvent("ff:calendar-added"));
+}
+
 /* ---- Brand logos (inline, self-contained — no external requests) ---- */
 
 function GoogleCalendarLogo() {
@@ -217,19 +222,33 @@ function AppleLogo() {
 
 function Chevron() {
   return (
-    <svg className="cc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <span className="icon chev" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="m9 18 6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
   );
 }
 
-function CalendarGlyph({ color = BRAND_RED }: { color?: string }) {
+function CalendarGlyph() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="3" y="4.5" width="18" height="16" rx="2.5" stroke={color} strokeWidth="1.8" />
-      <path d="M3 9h18" stroke={color} strokeWidth="1.8" />
-      <path d="M8 2.5v4M16 2.5v4" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
+    <span className="icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="18" x="3" y="4" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18" />
+      </svg>
+    </span>
+  );
+}
+
+function ClockGlyph() {
+  return (
+    <span className="icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    </span>
   );
 }
 
@@ -248,176 +267,106 @@ export default function CalendarConfirmation() {
   const mounted = state !== null;
   const booking = state?.booking ?? null;
 
-  const frame: React.CSSProperties = {
-    borderRadius: "14px",
-    background: "#0F1113",
-    border: "1px solid rgba(255,255,255,0.08)",
-    padding: "clamp(20px, 3vw, 28px)",
-    textAlign: "left",
-  };
-
   if (!mounted) {
     return (
-      <div style={frame}>
-        <p style={{ margin: 0, fontSize: "14px", color: TEXT_DIM, lineHeight: 1.6 }}>
-          Loading your booking details&hellip;
-        </p>
+      <div className="inner">
+        <p>Loading your booking details&hellip;</p>
       </div>
     );
   }
 
   if (!booking) {
     return (
-      <div style={frame}>
-        <style>{ccStyles}</style>
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
-          <CalendarGlyph color={TEXT_DIM} />
-          <span style={{ fontWeight: 800, fontSize: "15px", color: "#fff" }}>No booking found yet</span>
+      <div className="inner">
+        <div className="row-title">
+          <CalendarGlyph />
+          <span className="row-label">No booking found yet</span>
         </div>
-        <p style={{ margin: 0, fontSize: "14px", color: TEXT_DIM, lineHeight: 1.65 }}>
-          Once you schedule your call, your meeting details and one-tap calendar links
-          (Google, Outlook and Apple) will appear right here.
+        <p>
+          Once you schedule your call, your meeting details and one-tap calendar links (Google,
+          Outlook and Apple) will appear right here.
         </p>
       </div>
     );
   }
 
   return (
-    <div style={frame} className="cc-root">
-      <style>{ccStyles}</style>
-
-      {/* Confirmation badge */}
-      <div
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "7px",
-          background: "rgba(30,138,86,0.14)",
-          border: "1px solid rgba(30,138,86,0.4)",
-          borderRadius: "999px",
-          padding: "5px 12px",
-          marginBottom: "14px",
-        }}
-      >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12l5 5 9-9" stroke="#39C07E" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <div className="inner">
+      <span className="badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" />
         </svg>
-        <span style={{ fontWeight: 800, fontSize: "12px", letterSpacing: "0.04em", color: "#39C07E" }}>
-          You&rsquo;re booked
-        </span>
-      </div>
+        You&rsquo;re booked
+      </span>
 
-      {/* Greeting */}
-      <h4 style={{ margin: "0 0 6px", fontWeight: 900, fontSize: "clamp(19px, 2.4vw, 24px)", lineHeight: 1.15, color: "#fff", letterSpacing: "-0.01em" }}>
-        Hey {booking.firstName}, your call is booked.
-      </h4>
-      <p style={{ margin: "0 0 18px", fontSize: "clamp(14px, 1.5vw, 15px)", color: TEXT_DIM, lineHeight: 1.6 }}>
-        It&rsquo;s set for <strong style={{ color: "#fff", fontWeight: 700 }}>{booking.dateLabel}</strong> at{" "}
-        <strong style={{ color: "#fff", fontWeight: 700 }}>{booking.timeLabel}</strong>
-        {booking.tzLabel ? ` (${booking.tzLabel})` : ""}. Add it to your calendar so you don&rsquo;t miss it.
+      <div className="booked-title">Hey {booking.firstName}, your call is booked.</div>
+
+      <p>
+        It&rsquo;s set for <strong>{booking.dateLabel}</strong> at <strong>{booking.timeLabel}</strong>
+        {booking.tzLabel ? ` (${booking.tzLabel})` : ""}. Add it to your calendar so you don&rsquo;t
+        miss it.
       </p>
 
-      {/* Meeting detail card */}
-      <div
-        style={{
-          background: "rgba(255,255,255,0.035)",
-          border: "1px solid rgba(255,255,255,0.08)",
-          borderRadius: "12px",
-          padding: "14px 16px",
-          marginBottom: "18px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-        }}
-      >
-        <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-          <span style={{ flexShrink: 0, marginTop: "1px" }}>
-            <CalendarGlyph />
-          </span>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
-            <span style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: TEXT_DIM }}>
-              Meeting
-            </span>
-            <span style={{ fontSize: "15px", fontWeight: 700, color: "#fff" }}>{booking.eventName}</span>
+      <div className="detail-box">
+        <div className="detail-row">
+          <CalendarGlyph />
+          <div>
+            <div className="lbl">Meeting</div>
+            <div className="val">{booking.eventName}</div>
           </div>
         </div>
-        <div style={{ height: "1px", background: "rgba(255,255,255,0.07)" }} />
-        <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-          <span style={{ flexShrink: 0, marginTop: "1px" }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke={BRAND_RED} strokeWidth="1.8" />
-              <path d="M12 7.5V12l3 2" stroke={BRAND_RED} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
-            <span style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: TEXT_DIM }}>
-              When
-            </span>
-            <span style={{ fontSize: "15px", fontWeight: 700, color: "#fff" }}>{booking.dateLabel}</span>
-            <span style={{ fontSize: "13px", color: TEXT_DIM }}>
+        <div className="detail-row">
+          <ClockGlyph />
+          <div>
+            <div className="lbl">When</div>
+            <div className="val">{booking.dateLabel}</div>
+            <div className="sub">
               {booking.timeLabel}
               {booking.tzLabel ? ` · ${booking.tzLabel}` : ""}
-            </span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Add-to-calendar buttons */}
-      <span style={{ display: "block", fontSize: "12px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: TEXT_DIM, marginBottom: "10px" }}>
-        Add to your calendar
-      </span>
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        <a className="cc-btn" href={booking.googleUrl} target="_blank" rel="noopener noreferrer">
+      <span className="cal-label">Add to your calendar</span>
+      <div className="cal-links">
+        <a
+          className="cal-link"
+          href={booking.googleUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={markCalendarAdded}
+        >
           <GoogleCalendarLogo />
-          <span className="cc-btn-label">Add to Google Calendar</span>
+          <span className="cal-name">Add to Google Calendar</span>
           <Chevron />
         </a>
-        <a className="cc-btn" href={booking.outlookUrl} target="_blank" rel="noopener noreferrer">
+        <a
+          className="cal-link"
+          href={booking.outlookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={markCalendarAdded}
+        >
           <OutlookLogo />
-          <span className="cc-btn-label">Add to Outlook Calendar</span>
+          <span className="cal-name">Add to Outlook Calendar</span>
           <Chevron />
         </a>
-        <button className="cc-btn" type="button" onClick={() => downloadIcs(booking)}>
+        <button
+          className="cal-link"
+          type="button"
+          onClick={() => {
+            downloadIcs(booking);
+            markCalendarAdded();
+          }}
+        >
           <AppleLogo />
-          <span className="cc-btn-label">Add to Apple Calendar</span>
+          <span className="cal-name">Add to Apple Calendar</span>
           <Chevron />
         </button>
       </div>
 
-      <p style={{ margin: "14px 2px 0", fontSize: "12px", color: "#7A7D82", lineHeight: 1.5 }}>
-        Your video call link is in the confirmation email from Calendly.
-      </p>
+      <p className="cal-note">Your video call link is in the confirmation email from Calendly.</p>
     </div>
   );
 }
-
-const ccStyles = `
-  .cc-root .cc-btn {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 13px;
-    background: #ffffff;
-    color: #1a1d21;
-    border: 1px solid rgba(255,255,255,0.14);
-    box-shadow: 0 8px 22px -12px rgba(0,0,0,0.75);
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .cc-root .cc-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(0,0,0,0.8); background: #fbfbfc; }
-  .cc-root .cc-btn:active { transform: translateY(0); }
-  .cc-root .cc-btn:focus-visible { outline: 2px solid ${BRAND_RED}; outline-offset: 2px; }
-  .cc-root .cc-btn .cc-logo { width: 26px; height: 26px; flex-shrink: 0; }
-  .cc-root .cc-btn .cc-btn-label { font-size: 15px; font-weight: 800; letter-spacing: -0.01em; }
-  .cc-root .cc-btn .cc-chev { margin-left: auto; color: #b0b4ba; flex-shrink: 0; transition: transform 140ms ease, color 140ms ease; }
-  .cc-root .cc-btn:hover .cc-chev { color: #6b7076; transform: translateX(2px); }
-  @media (prefers-reduced-motion: reduce) {
-    .cc-root .cc-btn, .cc-root .cc-btn .cc-chev { transition: none; }
-    .cc-root .cc-btn:hover { transform: none; }
-    .cc-root .cc-btn:hover .cc-chev { transform: none; }
-  }
-`;

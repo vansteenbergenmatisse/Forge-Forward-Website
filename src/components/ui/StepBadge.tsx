@@ -1,66 +1,34 @@
 /**
- * High-contrast "STEP N" marker used to give the /booked page a clear
- * top-to-bottom hierarchy: title → step 1 → step 2 → step 3.
+ * Step marker for /booked: a quiet uppercase kicker ("Step 1 · 5 seconds")
+ * above a condensed heading. Sizing comes from the surrounding section
+ * (`.focus-step h2` / `.step3 h2`), so this only picks the type treatment.
  *
- * A filled red pill (white text) carries the step number, with a bold white
- * heading underneath. Server component — no client behavior needed.
+ * Server component — no client behavior needed.
  */
 
-const BRAND_RED = "#F6413E";
-
-export default function StepBadge({ n, title }: { n: number; title: string }) {
+export default function StepBadge({
+  n,
+  title,
+  hint,
+  large = false,
+  tight = false,
+}: {
+  n: number;
+  title: string;
+  /** Optional time/effort hint appended to the kicker. */
+  hint?: string;
+  /** Use the display headline face instead of the smaller subhead. */
+  large?: boolean;
+  /** Tighten the gap below when a note follows the heading. */
+  tight?: boolean;
+}) {
   return (
-    <div style={{ textAlign: "center", marginBottom: "clamp(18px, 2.4vw, 26px)" }}>
-      <span
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "9px",
-          background: BRAND_RED,
-          color: "#fff",
-          fontWeight: 900,
-          fontSize: "clamp(12px, 1.5vw, 14px)",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          padding: "8px 18px",
-          borderRadius: "999px",
-          boxShadow: "0 0 22px rgba(246,65,62,0.5)",
-        }}
-      >
-        {/* Number chip inside the pill for extra weight */}
-        <span
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "22px",
-            height: "22px",
-            borderRadius: "50%",
-            background: "#fff",
-            color: BRAND_RED,
-            fontSize: "13px",
-            fontWeight: 900,
-            lineHeight: 1,
-          }}
-        >
-          {n}
-        </span>
+    <>
+      <div className="kicker">
         Step {n}
-      </span>
-
-      <h2
-        style={{
-          margin: "14px 0 0",
-          fontWeight: 900,
-          fontSize: "clamp(24px, 3.4vw, 36px)",
-          lineHeight: 1.12,
-          letterSpacing: "-0.02em",
-          color: "#fff",
-          textWrap: "balance",
-        }}
-      >
-        {title}
-      </h2>
-    </div>
+        {hint ? ` · ${hint}` : ""}
+      </div>
+      <h2 className={`${large ? "headline" : "subhead"}${tight ? " tight" : ""}`}>{title}</h2>
+    </>
   );
 }
