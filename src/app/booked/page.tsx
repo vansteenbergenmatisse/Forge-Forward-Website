@@ -233,7 +233,7 @@ export default function BookedPage() {
  */
 const bookedStyles = `
   .bkPage {
-    --red: #F6413E; --red-hover: #E1332F;
+    --red: #F6413E; --red-hover: #E1332F; --red-deep: #C4211E;
     --charcoal: #1E1C1A; --charcoal-raised: #2A2724;
     --ivory: #F5F2EC; --ivory-line: #E4DFD6;
     --gray: #68635F; --gray-dark: #C9C5C0; --dark-line: #3A3633;
@@ -272,12 +272,21 @@ const bookedStyles = `
   .bkPage .hero .lede { font-size: clamp(15px, 1.6vw, 17px); line-height: 1.6; max-width: 660px; margin: 16px auto 0; }
 
   /* Focus card */
-  .bkPage .focus-card { width: min(720px, 100%); margin: clamp(22px, 3.4vw, 32px) auto 0; background: #fff; border-radius: 16px; overflow: hidden; }
+  .bkPage .focus-card { width: min(1080px, 100%); margin: clamp(22px, 3.4vw, 32px) auto 0; background: #fff; border-radius: 16px; overflow: hidden; }
   .bkPage .progress-track { height: 6px; background: var(--ivory-line); }
-  .bkPage .progress-fill { height: 100%; background: var(--red); }
+  .bkPage .progress-fill { height: 100%; background: var(--red); position: relative; overflow: hidden; }
+  /* Ambient loop: the red bar itself never moves. A deeper red re-fills it from
+     0 to the full 94% on every cycle, holds a beat, then fades out and starts
+     over — so the bar keeps replaying the progress already earned. scaleX +
+     opacity only, so it stays on the GPU and never touches layout. The
+     percentage breathes on the same 3.2s beat, making the bar and its label
+     read as one live status rather than two effects. */
+  .bkPage .progress-fill::after { content: ""; position: absolute; inset: 0; background: var(--red-deep); transform-origin: left center; transform: scaleX(0); animation: bkRefill 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; will-change: transform, opacity; }
+  @keyframes bkRefill { 0% { transform: scaleX(0); opacity: 1; } 55%, 75% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
   .bkPage .progress-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px clamp(24px, 6vw, 64px) 0; font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
   .bkPage .progress-meta .status { color: var(--gray); }
-  .bkPage .progress-meta .pct { color: var(--red); }
+  .bkPage .progress-meta .pct { color: var(--red); animation: bkBreathe 3.2s ease-in-out infinite; will-change: opacity; }
+  @keyframes bkBreathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
   .bkPage .focus-step { padding: clamp(26px, 4vw, 38px) clamp(24px, 6vw, 64px) clamp(30px, 4.6vw, 44px); text-align: center; }
   .bkPage .focus-step + .focus-step { border-top: 1px solid var(--ivory-line); }
   .bkPage .focus-step .kicker { color: var(--gray); margin-bottom: 12px; }
@@ -393,7 +402,8 @@ const bookedStyles = `
   .bkPage footer .legal { font-size: 11.5px; line-height: 1.6; color: #7A7570; max-width: 640px; margin: 0 auto; }
 
   @media (prefers-reduced-motion: reduce) {
-    .bkPage .down-chip { animation: none; }
+    .bkPage .down-chip, .bkPage .progress-meta .pct { animation: none; }
+    .bkPage .progress-fill::after { animation: none; opacity: 0; }
     .bkPage .btn, .bkPage .cal-link, .bkPage .cal-link .chev, .bkPage .progress-fill { transition: none; }
     .bkPage .btn:active { transform: none; }
     .bkPage .cal-link:hover .chev { transform: none; }
