@@ -1,3 +1,4 @@
+import BookedConfirmStep from "@/components/ui/BookedConfirmStep";
 import StepBadge from "@/components/ui/StepBadge";
 
 /**
@@ -8,10 +9,10 @@ import StepBadge from "@/components/ui/StepBadge";
  * work, and the remaining sliver is what this page is asking for. It never
  * moves, so it reads as a status ("almost there") rather than a live meter.
  *
- * Server component — no client behavior needed.
+ * Server component — step 1 is the only client piece, because it reads the
+ * invitee's name out of the URL to pre-fill the text message.
  */
 
-const SMS_HREF = "sms:+18666901229?&body=Confirming my call";
 const PROGRESS = 94;
 
 export default function BookedFocusCard() {
@@ -29,24 +30,8 @@ export default function BookedFocusCard() {
         <span className="pct">{PROGRESS}% complete</span>
       </div>
 
-      {/* Step 1 — confirm by text */}
-      <section className="focus-step">
-        <StepBadge n={1} hint="5 seconds" title="Text us to confirm" />
-        <a className="btn btn-red btn-block-mobile" href={SMS_HREF}>
-          Tap here to confirm your call <span className="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <p className="fallback">
-          On a computer? Just text{" "}
-          <a
-            href={SMS_HREF}
-            role="text"
-            aria-label="plus one, eight six six, six nine zero, one two two nine"
-          >
-            +1 (866) 690-1229
-          </a>{" "}
-          and say &ldquo;Confirming my call.&rdquo;
-        </p>
-      </section>
+      {/* Step 1 — confirm by text (client: pre-fills the invitee's name) */}
+      <BookedConfirmStep />
 
       {/* Step 2 — the video (player untouched, embedded exactly as before) */}
       <section className="focus-step">

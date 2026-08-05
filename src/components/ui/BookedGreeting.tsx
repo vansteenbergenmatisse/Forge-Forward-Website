@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { readInviteeFirstName } from "@/lib/inviteeName";
 
 /**
  * Hero copy for /booked. Reads the invitee's first name from the Calendly
@@ -15,11 +16,8 @@ export default function BookedGreeting() {
   const [firstName, setFirstName] = useState("");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const first = params.get("invitee_first_name");
-    const full = params.get("invitee_full_name");
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFirstName((first || (full ? full.split(" ")[0] : "") || "").trim());
+    setFirstName(readInviteeFirstName());
   }, []);
 
   return (
