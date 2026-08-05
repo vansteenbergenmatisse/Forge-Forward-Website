@@ -39,7 +39,7 @@ export default function BookedFocusCard() {
         <p className="note">Watch the video below and complete the 2 easy steps.</p>
         <div className="video-shell">
           <iframe
-            src="/booked-vsl.html?banner=0"
+            src="/booked-vsl.html?banner=0&speed=1.25"
             title="Watch this video for how to confirm your call"
             allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
             allowFullScreen

@@ -1008,6 +1008,12 @@
 
     rewindSeconds: 10,
 
+    // Playback rate the video starts at. 1 keeps this file's standalone
+    // behaviour unchanged; /booked opts into 1.25 via ?speed=1.25 so the
+    // viewer never has to open the menu. Must match a data-speed in the
+    // settings menu, otherwise YouTube snaps back to the nearest allowed rate.
+    speed: 1,
+
     banner: {
       show: true,
       minutes: 5,
@@ -1040,6 +1046,17 @@
 
   if (params.get("captions") === "1") {
     CONFIG.captions.defaultOn = true;
+  }
+
+  const urlSpeed = Number(
+    params.get("speed")
+  );
+
+  if (
+    Number.isFinite(urlSpeed) &&
+    urlSpeed > 0
+  ) {
+    CONFIG.speed = urlSpeed;
   }
 
   if (window.self !== window.top) {
@@ -1273,6 +1290,15 @@
 
     event.target.mute();
     event.target.playVideo();
+
+    // Rate has to be set after the player is ready — there is no playerVar for
+    // it. onPlaybackRateChange then ticks the matching item in the settings
+    // menu, so the viewer can still change it themselves.
+    if (CONFIG.speed !== 1) {
+      event.target.setPlaybackRate(
+        CONFIG.speed
+      );
+    }
 
     setMuteIcon();
     updateCaptionButton();
