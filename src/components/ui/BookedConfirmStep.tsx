@@ -35,7 +35,7 @@ export default function BookedConfirmStep() {
 
   return (
     <section className="focus-step">
-      <StepBadge n={1} hint="5 seconds" title="Text us to confirm" />
+      <StepBadge n={1} hint="5 seconds" title="Text to confirm your meeting" />
       <a className="btn btn-red btn-block-mobile" href={href}>
         Tap here to confirm your call <span className="arrow" aria-hidden="true">&rarr;</span>
       </a>

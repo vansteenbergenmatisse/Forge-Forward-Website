@@ -294,7 +294,7 @@ const bookedStyles = `
   .bkPage .focus-step .step-kicker .hint { color: var(--gray); }
   .bkPage .focus-step h2 { font-size: clamp(28px, 4vw, 36px); color: var(--charcoal); margin: 0 0 24px; }
   .bkPage .focus-step h2.tight { margin-bottom: 12px; }
-  .bkPage .focus-step .note { font-size: 13.5px; line-height: 1.6; color: var(--gray); margin: 0 0 20px; }
+  .bkPage .focus-step .note { font-size: 16px; line-height: 1.6; color: var(--gray); margin: 0 auto 20px; max-width: 620px; }
   .bkPage .focus-step .fallback { font-size: 13px; color: var(--gray); margin: 14px 0 0; line-height: 1.5; }
   .bkPage .focus-step .fallback a { color: var(--charcoal); font-weight: 600; }
   .bkPage .focus-step .fallback a:hover { color: var(--red); }
