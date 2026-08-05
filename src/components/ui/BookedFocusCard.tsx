@@ -36,10 +36,7 @@ export default function BookedFocusCard() {
       {/* Step 2 — the video (player untouched, embedded exactly as before) */}
       <section className="focus-step">
         <StepBadge n={2} hint="2 minutes" title="Don’t risk missing your meeting" tight />
-        <p className="note">
-          Watch this video to add this meeting to your calendar, to remember your appointment and
-          get the full value from your scheduled call.
-        </p>
+        <p className="note">Watch this video to add this meeting to your calendar.</p>
         <div className="video-shell">
           <iframe
             src="/booked-vsl.html?banner=0&speed=1.25"
